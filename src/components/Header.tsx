@@ -28,7 +28,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="/lovable-uploads/8a4d2f7b-d918-4e1e-9580-98dd06d151c4.png" 
+              src="/lovable-uploads/93ef227d-61c9-4604-9bbc-4f22b1f1d791.png" 
               alt="Kreede Logo" 
               className="h-20"
             />
@@ -68,7 +68,7 @@ const Header = () => {
               variant="outline" 
               size="sm"
               onClick={handleCallToBook}
-              className="border-white text-white hover:bg-white hover:text-kreede-black"
+              className="border-white text-kreede-black bg-white hover:bg-white/90"
             >
               <Phone className="mr-2 h-4 w-4" />
               Call & Book
@@ -77,7 +77,7 @@ const Header = () => {
               variant="outline" 
               size="sm"
               onClick={handleBookCourt}
-              className="border-white text-white hover:bg-white hover:text-kreede-black"
+              className="border-white text-kreede-black bg-white hover:bg-white/90"
             >
               <Calendar className="mr-2 h-4 w-4" />
               Book Court
@@ -131,7 +131,7 @@ const Header = () => {
                   variant="outline" 
                   size="sm"
                   onClick={handleCallToBook}
-                  className="justify-start border-white text-white hover:bg-white hover:text-kreede-black"
+                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90"
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   Call & Book
@@ -140,7 +140,7 @@ const Header = () => {
                   variant="outline" 
                   size="sm"
                   onClick={handleBookCourt}
-                  className="justify-start border-white text-white hover:bg-white hover:text-kreede-black"
+                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90"
                 >
                   <Calendar className="mr-2 h-4 w-4" />
                   Book Court

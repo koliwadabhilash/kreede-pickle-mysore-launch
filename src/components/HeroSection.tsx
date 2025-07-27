@@ -55,11 +55,11 @@ const HeroSection = () => {
           {/* Hero Text */}
           <div className="text-center mb-6">
             <p className="text-kreede-cream text-xl md:text-2xl font-light mb-1">
-              Welcome to
+              Welcome to Mysuru's Premium
             </p>
             <div className="-mt-1 mb-0">
               <h1 className="text-kreede-cream text-8xl md:text-9xl font-bold tracking-wider">
-                KREEDE
+                PICKLEBALL COURTS
               </h1>
             </div>
             <p className="text-kreede-cream text-xl md:text-2xl font-light -mt-2">
