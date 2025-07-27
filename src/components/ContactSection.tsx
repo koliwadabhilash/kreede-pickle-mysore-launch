@@ -111,10 +111,24 @@ const ContactSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 
                 type="email" 
+                id="newsletter-email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg bg-kreede-cream text-kreede-black border-0 focus:outline-none focus:ring-2 focus:ring-kreede-cream/50"
               />
-              <Button variant="kreede-outline" className="border-kreede-cream text-kreede-cream hover:bg-kreede-cream hover:text-kreede-black">
+              <Button 
+                variant="kreede-outline" 
+                className="border-kreede-cream text-kreede-cream hover:bg-kreede-cream hover:text-kreede-black"
+                onClick={() => {
+                  const email = (document.getElementById('newsletter-email') as HTMLInputElement)?.value;
+                  if (email && email.includes('@')) {
+                    navigator.clipboard.writeText(email);
+                    alert(`Email "${email}" copied to clipboard!`);
+                    (document.getElementById('newsletter-email') as HTMLInputElement).value = '';
+                  } else {
+                    alert('Please enter a valid email address');
+                  }
+                }}
+              >
                 Subscribe
               </Button>
             </div>
