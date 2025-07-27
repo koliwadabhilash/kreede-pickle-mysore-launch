@@ -17,25 +17,13 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Background Slideshow with Overlay */}
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="slideshow-container w-full h-full">
-          <img 
-            src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
-            alt="Pickleball Court 1" 
-            className="slideshow-image w-full h-full object-cover opacity-40"
-          />
-          <img 
-            src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-            alt="Pickleball Court 2" 
-            className="slideshow-image w-full h-full object-cover opacity-40"
-          />
-          <img 
-            src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80" 
-            alt="Pickleball Players" 
-            className="slideshow-image w-full h-full object-cover opacity-40"
-          />
-        </div>
+        <img 
+          src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
+          alt="Pickleball Court" 
+          className="w-full h-full object-cover opacity-40"
+        />
         <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
       </div>
 
