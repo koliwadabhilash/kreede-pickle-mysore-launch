@@ -57,16 +57,10 @@ const HeroSection = () => {
             <p className="text-kreede-cream text-xl md:text-2xl font-light mb-1">
               Welcome to
             </p>
-            <div className="-mt-1 mb-0 h-[40rem] md:h-[48rem] flex items-center justify-center">
-              <img 
-                key="kreede-home-logo"
-                src="/lovable-uploads/5794e2fc-e136-4926-ace9-13a3b803a0c7.png" 
-                alt="Kreede" 
-                width="640"
-                height="640"
-                className="max-h-full w-auto object-contain"
-                loading="eager"
-              />
+            <div className="-mt-1 mb-0">
+              <h1 className="text-kreede-cream text-8xl md:text-9xl font-bold tracking-wider">
+                KREEDE
+              </h1>
             </div>
             <p className="text-kreede-cream text-xl md:text-2xl font-light -mt-2">
               Unite. Thrive. Play.
