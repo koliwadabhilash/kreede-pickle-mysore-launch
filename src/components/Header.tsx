@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-kreede-cream/95 backdrop-blur-md border-b border-kreede-black/10">
+    <header className="fixed top-0 w-full z-50 bg-kreede-black/95 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -38,25 +38,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-lg"
+              className="text-white hover:text-white/70 font-medium transition-colors text-lg"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-lg"
+              className="text-white hover:text-white/70 font-medium transition-colors text-lg"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('ventures')}
-              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-lg"
+              className="text-white hover:text-white/70 font-medium transition-colors text-lg"
             >
               Our Ventures
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-lg"
+              className="text-white hover:text-white/70 font-medium transition-colors text-lg"
             >
               Contact
             </button>
@@ -65,17 +65,19 @@ const Header = () => {
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Button 
-              variant="kreede-primary" 
+              variant="outline" 
               size="sm"
               onClick={handleCallToBook}
+              className="border-white text-white hover:bg-white hover:text-kreede-black"
             >
               <Phone className="mr-2 h-4 w-4" />
               Call & Book
             </Button>
             <Button 
-              variant="kreede-primary" 
+              variant="outline" 
               size="sm"
               onClick={handleBookCourt}
+              className="border-white text-white hover:bg-white hover:text-kreede-black"
             >
               <Calendar className="mr-2 h-4 w-4" />
               Book Court
@@ -88,57 +90,57 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-kreede-black" />
+              <X className="h-6 w-6 text-white" />
             ) : (
-              <Menu className="h-6 w-6 text-kreede-black" />
+              <Menu className="h-6 w-6 text-white" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-kreede-black/10">
+          <div className="md:hidden py-4 border-t border-white/10">
             <nav className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('hero')}
-                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left text-lg"
+                className="text-white hover:text-white/70 font-medium transition-colors text-left text-lg"
               >
                 Home
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left text-lg"
+                className="text-white hover:text-white/70 font-medium transition-colors text-left text-lg"
               >
                 About
               </button>
               <button 
                 onClick={() => scrollToSection('ventures')}
-                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left text-lg"
+                className="text-white hover:text-white/70 font-medium transition-colors text-left text-lg"
               >
                 Our Ventures
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left text-lg"
+                className="text-white hover:text-white/70 font-medium transition-colors text-left text-lg"
               >
                 Contact
               </button>
               
               <div className="flex flex-col gap-3 pt-4">
                 <Button 
-                  variant="kreede-primary" 
+                  variant="outline" 
                   size="sm"
                   onClick={handleCallToBook}
-                  className="justify-start"
+                  className="justify-start border-white text-white hover:bg-white hover:text-kreede-black"
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   Call & Book
                 </Button>
                 <Button 
-                  variant="kreede-primary" 
+                  variant="outline" 
                   size="sm"
                   onClick={handleBookCourt}
-                  className="justify-start"
+                  className="justify-start border-white text-white hover:bg-white hover:text-kreede-black"
                 >
                   <Calendar className="mr-2 h-4 w-4" />
                   Book Court
