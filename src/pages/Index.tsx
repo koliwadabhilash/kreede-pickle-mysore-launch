@@ -7,47 +7,66 @@ import Footer from "@/components/Footer";
 import { useEffect } from "react";
 
 const Index = () => {
-  // Final debugging attempt - override scroll properties
   useEffect(() => {
-    console.log('Index component mounted');
+    console.log('Index component mounted - BLOCKING ALL SCROLLS for 6 seconds');
     
-    // Disable scroll restoration completely
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
+    // Store the scroll position when user scrolls
+    let userScrollPosition = 0;
+    let isBlocking = true;
     
-    // Override window.scrollTo to catch direct calls
+    // Override ALL scroll methods completely for 6 seconds
     const originalScrollTo = window.scrollTo;
-    window.scrollTo = function(...args: any[]) {
-      console.log('BLOCKED scrollTo call:', args, new Error().stack);
-      // Don't execute the scroll - block it completely
-      return;
-    };
-    
-    // Override scrollIntoView to catch those calls  
+    const originalScroll = window.scroll;
+    const originalScrollBy = window.scrollBy;
     const originalScrollIntoView = Element.prototype.scrollIntoView;
-    Element.prototype.scrollIntoView = function(...args: any[]) {
-      console.log('BLOCKED scrollIntoView call on:', this, args, new Error().stack);
-      // Don't execute the scroll - block it completely
-      return;
+    
+    // Block all scroll functions
+    window.scrollTo = () => console.log('BLOCKED scrollTo');
+    window.scroll = () => console.log('BLOCKED scroll');  
+    window.scrollBy = () => console.log('BLOCKED scrollBy');
+    Element.prototype.scrollIntoView = () => console.log('BLOCKED scrollIntoView');
+    
+    // Track user's intended scroll position
+    const handleUserScroll = () => {
+      if (!isBlocking) return;
+      userScrollPosition = window.scrollY;
+      console.log('User scrolled to:', userScrollPosition);
     };
     
-    // Monitor direct scroll property changes
-    let lastScrollY = window.scrollY;
-    const checkScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (Math.abs(currentScrollY - lastScrollY) > 50) {
-        console.log(`DIRECT SCROLL DETECTED: ${lastScrollY} -> ${currentScrollY}`);
+    window.addEventListener('scroll', handleUserScroll);
+    
+    // Monitor for forced scroll resets
+    const preventScrollReset = () => {
+      if (isBlocking && window.scrollY !== userScrollPosition && window.scrollY === 0) {
+        console.log('DETECTED SCROLL RESET - RESTORING POSITION');
+        window.scrollTo = originalScrollTo; // Temporarily restore
+        window.scrollTo(0, userScrollPosition);
+        window.scrollTo = () => console.log('BLOCKED scrollTo'); // Block again
       }
-      lastScrollY = currentScrollY;
     };
     
-    const scrollChecker = setInterval(checkScroll, 100);
+    const resetChecker = setInterval(preventScrollReset, 50);
+    
+    // Re-enable scrolling after 6 seconds
+    const timer = setTimeout(() => {
+      console.log('Enabling normal scroll behavior');
+      isBlocking = false;
+      window.scrollTo = originalScrollTo;
+      window.scroll = originalScroll;
+      window.scrollBy = originalScrollBy;
+      Element.prototype.scrollIntoView = originalScrollIntoView;
+      clearInterval(resetChecker);
+      window.removeEventListener('scroll', handleUserScroll);
+    }, 6000);
     
     return () => {
+      clearTimeout(timer);
+      clearInterval(resetChecker);
+      window.removeEventListener('scroll', handleUserScroll);
       window.scrollTo = originalScrollTo;
+      window.scroll = originalScroll;
+      window.scrollBy = originalScrollBy;
       Element.prototype.scrollIntoView = originalScrollIntoView;
-      clearInterval(scrollChecker);
     };
   }, []);
   return (
