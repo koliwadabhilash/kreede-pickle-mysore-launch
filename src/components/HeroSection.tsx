@@ -49,12 +49,12 @@ const HeroSection = () => {
             </p>
             <div className="-mt-1 mb-0">
               <img 
+                key="kreede-home-logo"
                 src="/lovable-uploads/5794e2fc-e136-4926-ace9-13a3b803a0c7.png" 
                 alt="Kreede" 
                 style={{ height: '40rem' }}
                 className="mx-auto md:max-h-[48rem]"
                 loading="eager"
-                fetchPriority="high"
               />
             </div>
             <p className="text-kreede-cream text-xl md:text-2xl font-light -mt-2">
