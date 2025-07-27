@@ -68,7 +68,7 @@ const Header = () => {
               variant="outline" 
               size="sm"
               onClick={handleCallToBook}
-              className="border-white text-kreede-black bg-white hover:bg-white/90"
+              className="border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black"
             >
               <Phone className="mr-2 h-4 w-4" />
               Call & Book
@@ -77,7 +77,7 @@ const Header = () => {
               variant="outline" 
               size="sm"
               onClick={handleBookCourt}
-              className="border-white text-kreede-black bg-white hover:bg-white/90"
+              className="border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black"
             >
               <Calendar className="mr-2 h-4 w-4" />
               Book Court
@@ -131,7 +131,7 @@ const Header = () => {
                   variant="outline" 
                   size="sm"
                   onClick={handleCallToBook}
-                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90"
+                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black"
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   Call & Book
@@ -140,7 +140,7 @@ const Header = () => {
                   variant="outline" 
                   size="sm"
                   onClick={handleBookCourt}
-                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90"
+                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black"
                 >
                   <Calendar className="mr-2 h-4 w-4" />
                   Book Court

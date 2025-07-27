@@ -67,9 +67,6 @@ const HeroSection = () => {
             </p>
           </div>
           
-          <p className="text-kreede-cream/90 text-xl md:text-2xl mb-4 font-light max-w-2xl mx-auto leading-relaxed">
-            Mysuru's Premier Pickleball Destination
-          </p>
           
           <p className="text-kreede-cream/80 text-lg mb-12 max-w-3xl mx-auto">
             Experience premium pickleball courts, connect with fellow players, and enjoy our thoughtfully curated snack bar. Join the fastest-growing sport in the world at Kreede.
