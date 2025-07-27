@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import VenturesSection from "@/components/VenturesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import BouncerSection from "@/components/BouncerSection";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -87,6 +88,7 @@ const Index = () => {
         </div>
       </main>
       <Footer />
+      <BouncerSection />
     </div>
   );
 };

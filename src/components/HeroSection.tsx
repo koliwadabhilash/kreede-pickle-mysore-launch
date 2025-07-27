@@ -1,9 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Calendar } from "lucide-react";
-import heroImage from "@/assets/pickleball-hero.jpg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const backgroundImages = [
+    "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+    "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
+    "https://images.unsplash.com/photo-1582192730841-2a682d7375f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
+    "https://images.unsplash.com/photo-1566916114136-61fe04d2d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80"
+  ];
+
+  // Background slideshow effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
+
   // Debug logging to track what's causing scroll resets
   useEffect(() => {
     const originalScrollTo = window.scrollTo;
@@ -39,13 +56,18 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Background Image with Overlay */}
+      {/* Background Slideshow with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
-          alt="Pickleball Court" 
-          className="w-full h-full object-cover opacity-40"
-        />
+        {backgroundImages.map((image, index) => (
+          <img 
+            key={index}
+            src={image} 
+            alt={`Pickleball Court ${index + 1}`} 
+            className={`absolute inset-0 w-full h-full object-cover opacity-40 transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-40' : 'opacity-0'
+            }`}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
       </div>
 
