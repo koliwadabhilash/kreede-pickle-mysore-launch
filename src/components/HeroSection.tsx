@@ -53,6 +53,8 @@ const HeroSection = () => {
                 alt="Kreede" 
                 style={{ height: '40rem' }}
                 className="mx-auto md:max-h-[48rem]"
+                loading="eager"
+                fetchPriority="high"
               />
             </div>
             <p className="text-kreede-cream text-xl md:text-2xl font-light -mt-2">
