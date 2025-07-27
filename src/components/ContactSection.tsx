@@ -31,25 +31,20 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      // EmailJS configuration - you'll need to set these up in EmailJS
-      const serviceId = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
-      const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID  
-      const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+      // Create mailto link with pre-filled email
+      const subject = encodeURIComponent('New Newsletter Subscription - Kreede');
+      const body = encodeURIComponent(`New newsletter subscription from: ${email}\n\nEmail: ${email}\nTimestamp: ${new Date().toLocaleString()}`);
+      const mailtoLink = `mailto:kreedesporting@gmail.com?subject=${subject}&body=${body}`;
       
-      const templateParams = {
-        user_email: email,
-        to_email: 'kreedesporting@gmail.com',
-        subject: 'New Newsletter Subscription - Kreede',
-        message: `New newsletter subscription from: ${email}`
-      };
-
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      // Open user's email client
+      window.open(mailtoLink, '_self');
       
-      alert('Thank you for subscribing! We\'ll keep you updated.');
+      // Show success message and clear form
+      alert('Thank you for subscribing! Your email client will open to send us your subscription request.');
       emailInput.value = '';
     } catch (error) {
-      console.error('Failed to send email:', error);
-      alert('Sorry, there was an error. Please try again or contact us directly.');
+      console.error('Failed to open email client:', error);
+      alert('Please email us directly at kreedesporting@gmail.com to subscribe.');
     } finally {
       setIsSubmitting(false);
     }
