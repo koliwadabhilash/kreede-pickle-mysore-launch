@@ -44,14 +44,15 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Hero Text */}
           <div className="text-center mb-6">
-            <p className="text-kreede-cream text-xl md:text-2xl font-light mb-4">
+            <p className="text-kreede-cream text-xl md:text-2xl font-light mb-2">
               Welcome to
             </p>
-            <div className="mb-4">
+            <div className="mb-2">
               <img 
                 src="/lovable-uploads/d9aaf6e7-e501-4a28-b2c6-92c5bb3b8bd9.png" 
                 alt="Kreede" 
-                className="h-80 md:h-96 mx-auto"
+                style={{ height: '40rem' }}
+                className="mx-auto md:max-h-[48rem]"
               />
             </div>
             <p className="text-kreede-cream text-xl md:text-2xl font-light">
@@ -70,21 +71,18 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button 
-              variant="kreede-cta" 
               size="lg" 
               onClick={handleBookCourt}
-              className="text-lg px-8 py-4 min-w-[200px]"
+              className="text-lg px-8 py-4 min-w-[200px] bg-kreede-cream text-kreede-black hover:bg-kreede-cream/90 border border-kreede-cream"
             >
               <Calendar className="mr-2 h-5 w-5" />
               Book a Court
-              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
             <Button 
-              variant="kreede-outline" 
               size="lg"
               onClick={handleCallToBook}
-              className="text-lg px-8 py-4 min-w-[200px] border-kreede-cream text-kreede-cream hover:bg-kreede-cream hover:text-kreede-black"
+              className="text-lg px-8 py-4 min-w-[200px] bg-kreede-cream text-kreede-black hover:bg-kreede-cream/90 border border-kreede-cream"
             >
               <Phone className="mr-2 h-5 w-5" />
               Call & Book
