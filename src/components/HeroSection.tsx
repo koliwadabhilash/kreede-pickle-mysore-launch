@@ -1,8 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Calendar } from "lucide-react";
 import heroImage from "@/assets/pickleball-hero.jpg";
+import { useEffect } from "react";
 
 const HeroSection = () => {
+  // Debug logging to track what's causing scroll resets
+  useEffect(() => {
+    const originalScrollTo = window.scrollTo;
+    const originalScrollIntoView = Element.prototype.scrollIntoView;
+    
+    window.scrollTo = function(...args) {
+      console.log('scrollTo called:', args, new Error().stack);
+      return originalScrollTo.apply(this, args);
+    };
+    
+    Element.prototype.scrollIntoView = function(...args) {
+      console.log('scrollIntoView called on:', this, args, new Error().stack);
+      return originalScrollIntoView.apply(this, args);
+    };
+    
+    return () => {
+      window.scrollTo = originalScrollTo;
+      Element.prototype.scrollIntoView = originalScrollIntoView;
+    };
+  }, []);
+
   const handleBookCourt = () => {
     // Redirect to external booking software
     window.open("https://booking.example.com", "_blank");
