@@ -17,7 +17,7 @@ const VenturesSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Pickleball Club */}
-          <Card className="bg-kreede-cream text-kreede-black border-0 group hover:shadow-glow transition-sport">
+          <Card className="bg-kreede-cream text-kreede-black border-0 group hover:shadow-glow transition-sport flex flex-col">
             <CardHeader className="text-center pb-6">
               <div className="mb-6">
                 <img 
@@ -28,12 +28,12 @@ const VenturesSection = () => {
               </div>
               <CardTitle className="text-3xl font-bold">Kreede Pickleball Club</CardTitle>
             </CardHeader>
-            <CardContent className="text-center">
+            <CardContent className="text-center flex flex-col flex-1">
               <p className="text-lg mb-8 opacity-80 leading-relaxed">
-                A professionally designed pickleball court experience, aimed at introducing and popularizing one of the fastest-growing sports in the world within the Mysore community.
+                A professionally designed pickleball court experience, aimed at introducing and popularizing one of the fastest-growing sports in the world within the Mysuru community.
               </p>
               
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-8 flex-1">
                 <div className="flex items-center justify-center gap-3">
                   <Users className="h-5 w-5" />
                   <span>3 Professional Courts</span>
@@ -51,7 +51,7 @@ const VenturesSection = () => {
               <Button 
                 variant="kreede-primary" 
                 size="lg"
-                className="w-full group-hover:scale-105 transition-sport"
+                className="w-full group-hover:scale-105 transition-sport mt-auto"
               >
                 Learn More About Pickleball
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -60,7 +60,7 @@ const VenturesSection = () => {
           </Card>
 
           {/* Snack Bar */}
-          <Card className="bg-kreede-cream text-kreede-black border-0 group hover:shadow-glow transition-sport">
+          <Card className="bg-kreede-cream text-kreede-black border-0 group hover:shadow-glow transition-sport flex flex-col">
             <CardHeader className="text-center pb-6">
               <div className="mb-6">
                 <img 
@@ -71,19 +71,19 @@ const VenturesSection = () => {
               </div>
               <CardTitle className="text-3xl font-bold">Kreede Snack Bar</CardTitle>
             </CardHeader>
-            <CardContent className="text-center">
+            <CardContent className="text-center flex flex-col flex-1">
               <p className="text-lg mb-8 opacity-80 leading-relaxed">
                 A thoughtfully curated cafe space for players and visitors to unwind, socialize, and build lasting connections off the court.
               </p>
               
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-8 flex-1">
                 <div className="flex items-center justify-center gap-3">
                   <Coffee className="h-5 w-5" />
                   <span>Fresh Coffee & Beverages</span>
                 </div>
                 <div className="flex items-center justify-center gap-3">
                   <Coffee className="h-5 w-5" />
-                  <span>Healthy Snacks & Meals</span>
+                  <span>Healthy Snacks</span>
                 </div>
                 <div className="flex items-center justify-center gap-3">
                   <Coffee className="h-5 w-5" />
@@ -94,7 +94,7 @@ const VenturesSection = () => {
               <Button 
                 variant="kreede-primary" 
                 size="lg"
-                className="w-full group-hover:scale-105 transition-sport"
+                className="w-full group-hover:scale-105 transition-sport mt-auto"
               >
                 Explore Menu
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -103,13 +103,6 @@ const VenturesSection = () => {
           </Card>
         </div>
 
-        <div className="text-center mt-16">
-          <div className="inline-block px-8 py-4 bg-kreede-cream/10 rounded-full border border-kreede-cream/20">
-            <span className="text-lg font-semibold">
-              🎯 More sports facilities coming soon - Stay tuned!
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );

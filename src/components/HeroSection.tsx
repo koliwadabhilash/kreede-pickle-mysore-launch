@@ -9,7 +9,10 @@ const HeroSection = () => {
   };
 
   const handleCallToBook = () => {
-    window.open("tel:+919876543210", "_self");
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -32,9 +35,9 @@ const HeroSection = () => {
             <img 
               src="/lovable-uploads/2f368600-c4a1-4e0f-9443-56d6df43ad2c.png" 
               alt="Kreede Logo" 
-              className="h-24 mx-auto mb-6"
+              className="h-40 mx-auto mb-6"
             />
-            <p className="text-kreede-cream text-lg font-light tracking-wider">
+            <p className="text-kreede-cream text-2xl font-medium tracking-wider bg-kreede-cream/10 px-6 py-2 rounded-full inline-block">
               Unite. Thrive. Play.
             </p>
           </div>
@@ -48,11 +51,11 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-kreede-cream/90 text-xl md:text-2xl mb-4 font-light max-w-2xl mx-auto leading-relaxed">
-            Mysore's Premier Pickleball Destination
+            Mysuru's Premier Pickleball Destination
           </p>
           
           <p className="text-kreede-cream/80 text-lg mb-12 max-w-3xl mx-auto">
-            Experience world-class pickleball courts, connect with fellow players, and enjoy our thoughtfully curated snack bar. Join the fastest-growing sport in the world at Kreede.
+            Experience premium pickleball courts, connect with fellow players, and enjoy our thoughtfully curated snack bar. Join the fastest-growing sport in the world at Kreede.
           </p>
 
           {/* CTA Buttons */}

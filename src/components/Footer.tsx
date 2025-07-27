@@ -2,11 +2,11 @@ import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react"
 
 const Footer = () => {
   const handleEmailContact = () => {
-    window.open("mailto:info@kreede.com", "_self");
+    window.open("mailto:kreedesporting@gmail.com", "_self");
   };
 
   const handleCallToBook = () => {
-    window.open("tel:+919876543210", "_self");
+    window.open("tel:+919845809169", "_self");
   };
 
   return (
@@ -23,18 +23,15 @@ const Footer = () => {
               />
             </div>
             <p className="text-kreede-cream/80 leading-relaxed mb-6 max-w-md">
-              Mysore's premier destination for pickleball and active living. Join us in building a community where sports, wellness, and friendships thrive.
+              Mysuru's premier destination for pickleball and active living. Join us in building a community where sports, wellness, and friendships thrive.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
+              <a href="https://www.instagram.com/kreede_official/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
+              <div className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center opacity-50 cursor-not-allowed">
+                <span className="text-xs">WA</span>
+              </div>
             </div>
           </div>
 
@@ -71,7 +68,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-kreede-cream/60" />
-                <span className="text-kreede-cream/80">Mysuru, Karnataka</span>
+                <span className="text-kreede-cream/80">Vijayanagar 1st stage, Mysuru</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-kreede-cream/60" />
@@ -79,7 +76,7 @@ const Footer = () => {
                   onClick={handleCallToBook}
                   className="text-kreede-cream/80 hover:text-kreede-cream transition-colors"
                 >
-                  +91 98765 43210
+                  +91 98458 09169
                 </button>
               </div>
               <div className="flex items-center gap-3">
@@ -88,7 +85,7 @@ const Footer = () => {
                   onClick={handleEmailContact}
                   className="text-kreede-cream/80 hover:text-kreede-cream transition-colors"
                 >
-                  info@kreede.com
+                  kreedesporting@gmail.com
                 </button>
               </div>
             </div>

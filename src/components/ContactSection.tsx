@@ -8,11 +8,11 @@ const ContactSection = () => {
   };
 
   const handleCallToBook = () => {
-    window.open("tel:+919876543210", "_self");
+    window.open("tel:+919845809169", "_self");
   };
 
   const handleEmailContact = () => {
-    window.open("mailto:info@kreede.com", "_self");
+    window.open("mailto:kreedesporting@gmail.com", "_self");
   };
 
   return (
@@ -22,7 +22,7 @@ const ContactSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Get in Touch
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
             Ready to experience Kreede? Book your court or get in touch with us. We're here to help you start your pickleball journey.
           </p>
         </div>
@@ -35,8 +35,8 @@ const ContactSection = () => {
                 <Calendar className="h-8 w-8" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Book Online</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Use our convenient online booking system to reserve your court time. Select your preferred slot and play!
+              <p className="text-foreground/70 mb-6 leading-relaxed">
+                Use our external booking platform to reserve your court time. Select your preferred slot and play!
               </p>
               <Button variant="kreede-primary" size="lg" className="w-full">
                 Book a Court
@@ -51,12 +51,12 @@ const ContactSection = () => {
                 <Phone className="h-8 w-8" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Call & Book</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Prefer to speak with us directly? Call our booking line and we'll help you find the perfect time to play.
+              <p className="text-foreground/70 mb-6 leading-relaxed">
+                Prefer to speak with us directly? Call us and we'll help you find the perfect time to play.
               </p>
               <Button variant="kreede-outline" size="lg" className="w-full">
                 <Phone className="mr-2 h-5 w-5" />
-                +91 98765 43210
+                +91 98458 09169
               </Button>
             </CardContent>
           </Card>
@@ -70,9 +70,9 @@ const ContactSection = () => {
                 <MapPin className="h-6 w-6" />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-2">Location</h3>
-              <p className="text-muted-foreground">
-                Mysuru, Karnataka<br />
-                <span className="text-sm opacity-70">Exact address coming soon</span>
+              <p className="text-foreground/70">
+                Vijayanagar 1st stage, Mysuru<br />
+                <span className="text-sm opacity-70">Karnataka</span>
               </p>
             </CardContent>
           </Card>
@@ -83,8 +83,8 @@ const ContactSection = () => {
                 <Mail className="h-6 w-6" />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-2">Email</h3>
-              <p className="text-muted-foreground hover:text-kreede-black transition-colors">
-                info@kreede.com
+              <p className="text-foreground/70 hover:text-kreede-black transition-colors">
+                kreedesporting@gmail.com
               </p>
             </CardContent>
           </Card>
@@ -95,8 +95,8 @@ const ContactSection = () => {
                 <Clock className="h-6 w-6" />
               </div>
               <h3 className="text-lg font-bold text-foreground mb-2">Hours</h3>
-              <p className="text-muted-foreground">
-                6:00 AM - 10:00 PM<br />
+              <p className="text-foreground/70">
+                6:00 AM - 11:00 PM<br />
                 <span className="text-sm opacity-70">7 days a week</span>
               </p>
             </CardContent>

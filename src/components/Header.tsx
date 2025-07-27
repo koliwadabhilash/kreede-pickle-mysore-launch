@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   const handleCallToBook = () => {
-    window.open("tel:+919876543210", "_self");
+    scrollToSection('contact');
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -30,7 +30,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/2f368600-c4a1-4e0f-9443-56d6df43ad2c.png" 
               alt="Kreede Logo" 
-              className="h-10"
+              className="h-14"
             />
           </div>
 
