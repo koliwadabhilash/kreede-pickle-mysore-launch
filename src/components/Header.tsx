@@ -28,7 +28,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="/lovable-uploads/2f368600-c4a1-4e0f-9443-56d6df43ad2c.png" 
+              src="/lovable-uploads/8a4d2f7b-d918-4e1e-9580-98dd06d151c4.png" 
               alt="Kreede Logo" 
               className="h-20"
             />

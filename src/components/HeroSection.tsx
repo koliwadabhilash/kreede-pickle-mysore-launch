@@ -49,7 +49,7 @@ const HeroSection = () => {
             </p>
             <div className="-mt-1 mb-0">
               <img 
-                src="/lovable-uploads/d9aaf6e7-e501-4a28-b2c6-92c5bb3b8bd9.png" 
+                src="/lovable-uploads/5794e2fc-e136-4926-ace9-13a3b803a0c7.png" 
                 alt="Kreede" 
                 style={{ height: '40rem' }}
                 className="mx-auto md:max-h-[48rem]"
