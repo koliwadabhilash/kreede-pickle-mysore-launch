@@ -44,10 +44,10 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Hero Text */}
           <div className="text-center mb-6">
-            <p className="text-kreede-cream text-xl md:text-2xl font-light mb-2">
+            <p className="text-kreede-cream text-xl md:text-2xl font-light mb-1">
               Welcome to
             </p>
-            <div className="mb-2">
+            <div className="-mt-1 mb-0">
               <img 
                 src="/lovable-uploads/d9aaf6e7-e501-4a28-b2c6-92c5bb3b8bd9.png" 
                 alt="Kreede" 
@@ -55,7 +55,7 @@ const HeroSection = () => {
                 className="mx-auto md:max-h-[48rem]"
               />
             </div>
-            <p className="text-kreede-cream text-xl md:text-2xl font-light">
+            <p className="text-kreede-cream text-xl md:text-2xl font-light -mt-2">
               Unite. Thrive. Play.
             </p>
           </div>

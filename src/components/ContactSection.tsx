@@ -106,7 +106,7 @@ const ContactSection = () => {
           <div className="bg-kreede-black text-kreede-cream rounded-2xl p-12 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
             <p className="text-lg opacity-90 mb-6">
-              Be the first to know about our grand opening, special events, and court availability.
+              Be the first to know about our grand opening, special events, discounts, and court availability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 
