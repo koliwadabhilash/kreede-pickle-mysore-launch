@@ -17,13 +17,25 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Background Image with Overlay */}
+      {/* Background Slideshow with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Kreede Pickleball Courts" 
-          className="w-full h-full object-cover opacity-30"
-        />
+        <div className="slideshow-container w-full h-full">
+          <img 
+            src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
+            alt="Pickleball Court 1" 
+            className="slideshow-image w-full h-full object-cover opacity-40"
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            alt="Pickleball Court 2" 
+            className="slideshow-image w-full h-full object-cover opacity-40"
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80" 
+            alt="Pickleball Players" 
+            className="slideshow-image w-full h-full object-cover opacity-40"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
       </div>
 
@@ -38,16 +50,21 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Text */}
-          <h1 className="text-kreede-cream text-6xl md:text-8xl font-bold mb-6 tracking-tight">
-            Welcome to
-            <span className="block">
+          <div className="text-center mb-6">
+            <p className="text-kreede-cream text-xl md:text-2xl font-light mb-4">
+              Welcome to
+            </p>
+            <div className="mb-4">
               <img 
                 src="/lovable-uploads/d9aaf6e7-e501-4a28-b2c6-92c5bb3b8bd9.png" 
                 alt="Kreede" 
-                className="h-24 md:h-32 mx-auto"
+                className="h-32 md:h-48 mx-auto"
               />
-            </span>
-          </h1>
+            </div>
+            <p className="text-kreede-cream text-xl md:text-2xl font-light">
+              Unite. Thrive. Play.
+            </p>
+          </div>
           
           <p className="text-kreede-cream/90 text-xl md:text-2xl mb-4 font-light max-w-2xl mx-auto leading-relaxed">
             Mysuru's Premier Pickleball Destination

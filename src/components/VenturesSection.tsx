@@ -23,7 +23,7 @@ const VenturesSection = () => {
                 <img 
                   src="/lovable-uploads/cdf490ee-7c3b-4946-8781-a7dfd8ba4e04.png" 
                   alt="Pickleball Club Logo" 
-                  className="h-24 mx-auto"
+                  className="h-36 mx-auto"
                 />
               </div>
               <CardTitle className="text-3xl font-bold">Kreede Pickleball Club</CardTitle>
@@ -66,7 +66,7 @@ const VenturesSection = () => {
                 <img 
                   src="/lovable-uploads/049ec9e9-9036-4827-a003-03490f60d983.png" 
                   alt="Snack Bar Logo" 
-                  className="h-24 mx-auto"
+                  className="h-36 mx-auto"
                 />
               </div>
               <CardTitle className="text-3xl font-bold">Kreede Snack Bar</CardTitle>

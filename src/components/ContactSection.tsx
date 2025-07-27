@@ -54,10 +54,10 @@ const ContactSection = () => {
               <p className="text-foreground/70 mb-6 leading-relaxed">
                 Prefer to speak with us directly? Call us and we'll help you find the perfect time to play.
               </p>
-              <Button variant="kreede-outline" size="lg" className="w-full">
-                <Phone className="mr-2 h-5 w-5" />
+              <div className="bg-kreede-black text-kreede-cream px-6 py-3 rounded-lg flex items-center justify-center gap-2 text-lg font-semibold">
+                <Phone className="h-5 w-5" />
                 +91 98458 09169
-              </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
