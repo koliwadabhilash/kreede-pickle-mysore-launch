@@ -38,14 +38,14 @@ const ContactSection = () => {
               <p className="text-foreground/70 mb-6 leading-relaxed">
                 Use our external booking platform to reserve your court time. Select your preferred slot and play!
               </p>
-              <Button variant="kreede-primary" size="lg" className="w-full">
+              <Button variant="kreede-primary" size="lg" className="w-full min-h-[56px]">
                 Book a Court
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </CardContent>
           </Card>
 
-          <Card className="group hover:shadow-sport transition-sport border-2 hover:border-kreede-black/20 cursor-pointer" onClick={handleCallToBook}>
+          <Card className="group hover:shadow-sport transition-sport border-2 hover:border-kreede-black/20">
             <CardContent className="p-8 text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-kreede-black text-kreede-cream rounded-full mb-6 group-hover:scale-110 transition-sport">
                 <Phone className="h-8 w-8" />
@@ -54,7 +54,7 @@ const ContactSection = () => {
               <p className="text-foreground/70 mb-6 leading-relaxed">
                 Prefer to speak with us directly? Call us and we'll help you find the perfect time to play.
               </p>
-              <div className="bg-kreede-black text-kreede-cream px-6 py-3 rounded-lg flex items-center justify-center gap-2 text-lg font-semibold">
+              <div className="bg-kreede-black text-kreede-cream px-6 py-4 rounded-lg flex items-center justify-center gap-2 text-lg font-semibold min-h-[56px]">
                 <Phone className="h-5 w-5" />
                 +91 98458 09169
               </div>

@@ -42,13 +42,6 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Logo and Brand */}
-          <div className="mb-8">
-            <p className="text-kreede-cream text-3xl md:text-4xl font-bold tracking-wider bg-kreede-cream/10 px-8 py-4 rounded-full inline-block">
-              Unite. Thrive. Play.
-            </p>
-          </div>
-
           {/* Hero Text */}
           <div className="text-center mb-6">
             <p className="text-kreede-cream text-xl md:text-2xl font-light mb-4">
@@ -58,7 +51,7 @@ const HeroSection = () => {
               <img 
                 src="/lovable-uploads/d9aaf6e7-e501-4a28-b2c6-92c5bb3b8bd9.png" 
                 alt="Kreede" 
-                className="h-32 md:h-48 mx-auto"
+                className="h-80 md:h-96 mx-auto"
               />
             </div>
             <p className="text-kreede-cream text-xl md:text-2xl font-light">
