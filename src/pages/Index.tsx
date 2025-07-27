@@ -7,67 +7,47 @@ import Footer from "@/components/Footer";
 import { useEffect } from "react";
 
 const Index = () => {
-  // Comprehensive debugging for scroll issues
+  // Final debugging attempt - override scroll properties
   useEffect(() => {
     console.log('Index component mounted');
     
-    // Disable any automatic scroll restoration
+    // Disable scroll restoration completely
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
     
-    // Track all potential scroll causes
-    let scrollY = window.scrollY;
+    // Override window.scrollTo to catch direct calls
+    const originalScrollTo = window.scrollTo;
+    window.scrollTo = function(...args: any[]) {
+      console.log('BLOCKED scrollTo call:', args, new Error().stack);
+      // Don't execute the scroll - block it completely
+      return;
+    };
     
-    const logScrollChange = (source: string) => {
-      const newScrollY = window.scrollY;
-      if (Math.abs(newScrollY - scrollY) > 50) {
-        console.log(`MAJOR SCROLL CHANGE from ${source}: ${scrollY} -> ${newScrollY}`);
+    // Override scrollIntoView to catch those calls  
+    const originalScrollIntoView = Element.prototype.scrollIntoView;
+    Element.prototype.scrollIntoView = function(...args: any[]) {
+      console.log('BLOCKED scrollIntoView call on:', this, args, new Error().stack);
+      // Don't execute the scroll - block it completely
+      return;
+    };
+    
+    // Monitor direct scroll property changes
+    let lastScrollY = window.scrollY;
+    const checkScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (Math.abs(currentScrollY - lastScrollY) > 50) {
+        console.log(`DIRECT SCROLL DETECTED: ${lastScrollY} -> ${currentScrollY}`);
       }
-      scrollY = newScrollY;
+      lastScrollY = currentScrollY;
     };
     
-    // Monitor all scroll events
-    const handleScroll = () => logScrollChange('scroll event');
-    window.addEventListener('scroll', handleScroll);
-    
-    // Monitor focus changes (can cause scroll)
-    const handleFocusIn = (e: FocusEvent) => {
-      console.log('Focus changed to:', e.target);
-      setTimeout(() => logScrollChange('focus change'), 0);
-    };
-    document.addEventListener('focusin', handleFocusIn);
-    
-    // Monitor DOM mutations that could trigger layout shifts
-    const observer = new MutationObserver(() => {
-      setTimeout(() => logScrollChange('DOM mutation'), 0);
-    });
-    observer.observe(document.body, { 
-      childList: true, 
-      subtree: true, 
-      attributes: true, 
-      attributeFilter: ['style', 'class'] 
-    });
-    
-    // Monitor image loads
-    const handleImageLoad = (e: Event) => {
-      console.log('Image loaded:', (e.target as HTMLImageElement).src);
-      setTimeout(() => logScrollChange('image load'), 0);
-    };
-    document.addEventListener('load', handleImageLoad, true);
-    
-    // Set a timer to see what happens at 3-4 seconds
-    const timer = setTimeout(() => {
-      console.log('4 second mark reached, current scroll:', window.scrollY);
-      logScrollChange('4 second timer');
-    }, 4000);
+    const scrollChecker = setInterval(checkScroll, 100);
     
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('load', handleImageLoad, true);
-      observer.disconnect();
-      clearTimeout(timer);
+      window.scrollTo = originalScrollTo;
+      Element.prototype.scrollIntoView = originalScrollIntoView;
+      clearInterval(scrollChecker);
     };
   }, []);
   return (
