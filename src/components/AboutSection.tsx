@@ -47,7 +47,7 @@ const AboutSection = () => {
                 <h3 className="text-xl font-bold text-foreground mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-foreground/90 leading-relaxed font-medium">
                   {feature.description}
                 </p>
               </CardContent>

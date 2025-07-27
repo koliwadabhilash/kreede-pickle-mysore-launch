@@ -21,7 +21,7 @@ const VenturesSection = () => {
             <CardHeader className="text-center pb-6">
               <div className="mb-6">
                 <img 
-                  src="/lovable-uploads/355f6fab-2868-46d7-b9ec-54eeac7fc199.png" 
+                  src="/lovable-uploads/cdf490ee-7c3b-4946-8781-a7dfd8ba4e04.png" 
                   alt="Pickleball Club Logo" 
                   className="h-24 mx-auto"
                 />
@@ -64,7 +64,7 @@ const VenturesSection = () => {
             <CardHeader className="text-center pb-6">
               <div className="mb-6">
                 <img 
-                  src="/lovable-uploads/a22c32c2-40b7-46bc-bac2-481a870b42d0.png" 
+                  src="/lovable-uploads/049ec9e9-9036-4827-a003-03490f60d983.png" 
                   alt="Snack Bar Logo" 
                   className="h-24 mx-auto"
                 />

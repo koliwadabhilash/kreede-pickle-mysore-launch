@@ -30,7 +30,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/2f368600-c4a1-4e0f-9443-56d6df43ad2c.png" 
               alt="Kreede Logo" 
-              className="h-14"
+              className="h-20"
             />
           </div>
 
@@ -38,25 +38,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors"
+              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-lg"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors"
+              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-lg"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('ventures')}
-              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors"
+              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-lg"
             >
               Our Ventures
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors"
+              className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-lg"
             >
               Contact
             </button>
@@ -65,12 +65,12 @@ const Header = () => {
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Button 
-              variant="kreede-outline" 
+              variant="kreede-primary" 
               size="sm"
               onClick={handleCallToBook}
             >
               <Phone className="mr-2 h-4 w-4" />
-              Call
+              Call & Book
             </Button>
             <Button 
               variant="kreede-primary" 
@@ -101,32 +101,32 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('hero')}
-                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left"
+                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left text-lg"
               >
                 Home
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left"
+                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left text-lg"
               >
                 About
               </button>
               <button 
                 onClick={() => scrollToSection('ventures')}
-                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left"
+                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left text-lg"
               >
                 Our Ventures
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left"
+                className="text-kreede-black hover:text-kreede-black/70 font-medium transition-colors text-left text-lg"
               >
                 Contact
               </button>
               
               <div className="flex flex-col gap-3 pt-4">
                 <Button 
-                  variant="kreede-outline" 
+                  variant="kreede-primary" 
                   size="sm"
                   onClick={handleCallToBook}
                   className="justify-start"

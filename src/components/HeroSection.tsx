@@ -32,12 +32,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Logo and Brand */}
           <div className="mb-8">
-            <img 
-              src="/lovable-uploads/2f368600-c4a1-4e0f-9443-56d6df43ad2c.png" 
-              alt="Kreede Logo" 
-              className="h-40 mx-auto mb-6"
-            />
-            <p className="text-kreede-cream text-2xl font-medium tracking-wider bg-kreede-cream/10 px-6 py-2 rounded-full inline-block">
+            <p className="text-kreede-cream text-3xl md:text-4xl font-bold tracking-wider bg-kreede-cream/10 px-8 py-4 rounded-full inline-block">
               Unite. Thrive. Play.
             </p>
           </div>
@@ -45,8 +40,12 @@ const HeroSection = () => {
           {/* Hero Text */}
           <h1 className="text-kreede-cream text-6xl md:text-8xl font-bold mb-6 tracking-tight">
             Welcome to
-            <span className="block bg-gradient-accent bg-clip-text text-transparent">
-              Kreede
+            <span className="block">
+              <img 
+                src="/lovable-uploads/d9aaf6e7-e501-4a28-b2c6-92c5bb3b8bd9.png" 
+                alt="Kreede" 
+                className="h-24 md:h-32 mx-auto"
+              />
             </span>
           </h1>
           

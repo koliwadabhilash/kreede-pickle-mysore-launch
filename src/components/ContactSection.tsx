@@ -69,10 +69,9 @@ const ContactSection = () => {
               <div className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full mb-4">
                 <MapPin className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Location</h3>
-              <p className="text-foreground/70">
+              <p className="text-foreground text-xl font-bold">
                 Vijayanagar 1st stage, Mysuru<br />
-                <span className="text-sm opacity-70">Karnataka</span>
+                <span className="text-lg">Karnataka</span>
               </p>
             </CardContent>
           </Card>
@@ -82,9 +81,9 @@ const ContactSection = () => {
               <div className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full mb-4">
                 <Mail className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Email</h3>
-              <p className="text-foreground/70 hover:text-kreede-black transition-colors">
-                kreedesporting@gmail.com
+              <p className="text-foreground text-lg font-bold hover:text-kreede-black transition-colors">
+                kreedesporting@gmail.com<br />
+                <span className="text-foreground text-lg font-bold">+91 98458 09169</span>
               </p>
             </CardContent>
           </Card>
@@ -94,10 +93,9 @@ const ContactSection = () => {
               <div className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full mb-4">
                 <Clock className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Hours</h3>
-              <p className="text-foreground/70">
-                6:00 AM - 11:00 PM<br />
-                <span className="text-sm opacity-70">7 days a week</span>
+              <p className="text-foreground text-xl font-bold">
+                6 AM - 11 PM<br />
+                <span className="text-lg">7 days a week</span>
               </p>
             </CardContent>
           </Card>
