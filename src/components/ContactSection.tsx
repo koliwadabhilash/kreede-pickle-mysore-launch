@@ -106,9 +106,11 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
           <Card className="text-center border-2 border-transparent hover:border-kreede-black/10 transition-sport">
             <CardContent className="p-6">
-              <h4 className="text-xl font-bold text-foreground mb-4">Location</h4>
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full mb-4">
-                <MapPin className="h-6 w-6" />
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full">
+                  <MapPin className="h-6 w-6" />
+                </div>
+                <h4 className="text-xl font-bold text-foreground">Location</h4>
               </div>
               <p className="text-foreground text-xl font-bold">
                 Vijayanagar 1st stage, Mysuru<br />
@@ -119,9 +121,11 @@ const ContactSection = () => {
 
           <Card className="text-center border-2 border-transparent hover:border-kreede-black/10 transition-sport cursor-pointer" onClick={handleEmailContact}>
             <CardContent className="p-6">
-              <h4 className="text-xl font-bold text-foreground mb-4">Contact</h4>
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full mb-4">
-                <Mail className="h-6 w-6" />
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full">
+                  <Mail className="h-6 w-6" />
+                </div>
+                <h4 className="text-xl font-bold text-foreground">Contact</h4>
               </div>
               <p className="text-foreground text-lg font-bold hover:text-kreede-black transition-colors">
                 kreedesporting@gmail.com<br />
@@ -132,9 +136,11 @@ const ContactSection = () => {
 
           <Card className="text-center border-2 border-transparent hover:border-kreede-black/10 transition-sport">
             <CardContent className="p-6">
-              <h4 className="text-xl font-bold text-foreground mb-4">Hours</h4>
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full mb-4">
-                <Clock className="h-6 w-6" />
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full">
+                  <Clock className="h-6 w-6" />
+                </div>
+                <h4 className="text-xl font-bold text-foreground">Hours</h4>
               </div>
               <p className="text-foreground text-xl font-bold">
                 6 AM - 11 PM<br />
@@ -145,10 +151,17 @@ const ContactSection = () => {
 
           <Card className="text-center border-2 border-transparent hover:border-kreede-black/10 transition-sport">
             <CardContent className="p-6">
-              <h4 className="text-xl font-bold text-foreground mb-4">Social</h4>
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full">
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <h4 className="text-xl font-bold text-foreground">Social</h4>
+              </div>
               <div className="flex justify-center gap-4 mb-4">
                 <a 
-                  href="https://instagram.com/kreede" 
+                  href="https://www.instagram.com/kreede_official/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-12 h-12 bg-kreede-black/10 text-kreede-black rounded-full hover:bg-kreede-black hover:text-kreede-cream transition-colors"
