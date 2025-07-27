@@ -61,7 +61,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Kreede Brand Colors
+				'kreede': {
+					cream: 'hsl(var(--kreede-cream))',
+					black: 'hsl(var(--kreede-black))',
+					'dark-grey': 'hsl(var(--kreede-dark-grey))'
 				}
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-accent': 'var(--gradient-accent)'
+			},
+			boxShadow: {
+				'sport': 'var(--shadow-sport)',
+				'glow': 'var(--shadow-glow)'
+			},
+			transitionTimingFunction: {
+				'sport': 'var(--transition-sport)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

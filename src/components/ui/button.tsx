@@ -18,6 +18,10 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Kreede Brand Variants
+        "kreede-primary": "bg-kreede-black text-kreede-cream hover:bg-kreede-dark-grey transition-sport shadow-sport hover:shadow-glow transform hover:scale-105",
+        "kreede-outline": "border-2 border-kreede-black bg-transparent text-kreede-black hover:bg-kreede-black hover:text-kreede-cream transition-sport",
+        "kreede-cta": "bg-gradient-hero text-kreede-cream hover:shadow-sport transition-sport transform hover:scale-105 font-bold tracking-wide",
       },
       size: {
         default: "h-10 px-4 py-2",

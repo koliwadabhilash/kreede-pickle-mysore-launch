@@ -1,0 +1,118 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Coffee, Users } from "lucide-react";
+
+const VenturesSection = () => {
+  return (
+    <section className="py-20 bg-kreede-black text-kreede-cream">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Our Current Ventures
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
+            We are proud to launch two flagship ventures under the Kreede umbrella, representing our first step toward a larger vision of blending fitness, sport, and community.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Pickleball Club */}
+          <Card className="bg-kreede-cream text-kreede-black border-0 group hover:shadow-glow transition-sport">
+            <CardHeader className="text-center pb-6">
+              <div className="mb-6">
+                <img 
+                  src="/lovable-uploads/355f6fab-2868-46d7-b9ec-54eeac7fc199.png" 
+                  alt="Pickleball Club Logo" 
+                  className="h-24 mx-auto"
+                />
+              </div>
+              <CardTitle className="text-3xl font-bold">Kreede Pickleball Club</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-lg mb-8 opacity-80 leading-relaxed">
+                A professionally designed pickleball court experience, aimed at introducing and popularizing one of the fastest-growing sports in the world within the Mysore community.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center justify-center gap-3">
+                  <Users className="h-5 w-5" />
+                  <span>3 Professional Courts</span>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <Users className="h-5 w-5" />
+                  <span>All Skill Levels Welcome</span>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <Users className="h-5 w-5" />
+                  <span>Community Tournaments</span>
+                </div>
+              </div>
+
+              <Button 
+                variant="kreede-primary" 
+                size="lg"
+                className="w-full group-hover:scale-105 transition-sport"
+              >
+                Learn More About Pickleball
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </CardContent>
+          </Card>
+
+          {/* Snack Bar */}
+          <Card className="bg-kreede-cream text-kreede-black border-0 group hover:shadow-glow transition-sport">
+            <CardHeader className="text-center pb-6">
+              <div className="mb-6">
+                <img 
+                  src="/lovable-uploads/a22c32c2-40b7-46bc-bac2-481a870b42d0.png" 
+                  alt="Snack Bar Logo" 
+                  className="h-24 mx-auto"
+                />
+              </div>
+              <CardTitle className="text-3xl font-bold">Kreede Snack Bar</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-lg mb-8 opacity-80 leading-relaxed">
+                A thoughtfully curated cafe space for players and visitors to unwind, socialize, and build lasting connections off the court.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center justify-center gap-3">
+                  <Coffee className="h-5 w-5" />
+                  <span>Fresh Coffee & Beverages</span>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <Coffee className="h-5 w-5" />
+                  <span>Healthy Snacks & Meals</span>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <Coffee className="h-5 w-5" />
+                  <span>Social Community Space</span>
+                </div>
+              </div>
+
+              <Button 
+                variant="kreede-primary" 
+                size="lg"
+                className="w-full group-hover:scale-105 transition-sport"
+              >
+                Explore Menu
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="text-center mt-16">
+          <div className="inline-block px-8 py-4 bg-kreede-cream/10 rounded-full border border-kreede-cream/20">
+            <span className="text-lg font-semibold">
+              🎯 More sports facilities coming soon - Stay tuned!
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default VenturesSection;
