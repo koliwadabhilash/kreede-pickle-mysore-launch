@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Calendar, Clock, ArrowRight } from "lucide-react";
+import emailjs from '@emailjs/browser';
+import { useState } from "react";
 
 const ContactSection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleBookCourt = () => {
     window.open("https://booking.example.com", "_blank");
   };
@@ -13,6 +17,42 @@ const ContactSection = () => {
 
   const handleEmailContact = () => {
     window.open("mailto:kreedesporting@gmail.com", "_self");
+  };
+
+  const handleNewsletterSignup = async () => {
+    const emailInput = document.getElementById('newsletter-email') as HTMLInputElement;
+    const email = emailInput?.value;
+    
+    if (!email || !email.includes('@')) {
+      alert('Please enter a valid email address');
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      // EmailJS configuration - you'll need to set these up in EmailJS
+      const serviceId = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+      const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID  
+      const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+      
+      const templateParams = {
+        user_email: email,
+        to_email: 'kreedesporting@gmail.com',
+        subject: 'New Newsletter Subscription - Kreede',
+        message: `New newsletter subscription from: ${email}`
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      alert('Thank you for subscribing! We\'ll keep you updated.');
+      emailInput.value = '';
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      alert('Sorry, there was an error. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -118,18 +158,10 @@ const ContactSection = () => {
               <Button 
                 variant="kreede-outline" 
                 className="border-kreede-cream text-kreede-cream hover:bg-kreede-cream hover:text-kreede-black"
-                onClick={() => {
-                  const email = (document.getElementById('newsletter-email') as HTMLInputElement)?.value;
-                  if (email && email.includes('@')) {
-                    navigator.clipboard.writeText(email);
-                    alert(`Email "${email}" copied to clipboard!`);
-                    (document.getElementById('newsletter-email') as HTMLInputElement).value = '';
-                  } else {
-                    alert('Please enter a valid email address');
-                  }
-                }}
+                onClick={handleNewsletterSignup}
+                disabled={isSubmitting}
               >
-                Subscribe
+                {isSubmitting ? 'Sending...' : 'Subscribe'}
               </Button>
             </div>
           </div>
