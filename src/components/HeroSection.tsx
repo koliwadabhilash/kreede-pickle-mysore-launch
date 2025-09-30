@@ -98,27 +98,27 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
             <Button 
               size="lg" 
-              onClick={handleBookCourt}
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto sm:min-w-[200px] bg-kreede-cream text-kreede-black hover:bg-kreede-cream/90 border border-kreede-cream"
-            >
-              <Calendar className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
-              Book a Court
-            </Button>
-            
-            <Button 
-              size="lg"
               onClick={handleCallToBook}
               className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto sm:min-w-[200px] bg-kreede-cream text-kreede-black hover:bg-kreede-cream/90 border border-kreede-cream"
             >
               <Phone className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
               Call & Book
             </Button>
+            
+            <Button 
+              size="lg"
+              onClick={handleBookCourt}
+              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto sm:min-w-[200px] bg-kreede-cream text-kreede-black hover:bg-kreede-cream/90 border border-kreede-cream"
+            >
+              <Calendar className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
+              Book a Court
+            </Button>
           </div>
 
           {/* Location Badge */}
           <div className="mt-8 md:mt-12 inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-kreede-cream/10 backdrop-blur-sm rounded-full border border-kreede-cream/20">
             <span className="text-kreede-cream/90 font-medium text-sm sm:text-base">
-              📍 Coming Soon to Mysuru, Karnataka
+              📍 Mysuru, Karnataka
             </span>
           </div>
         </div>

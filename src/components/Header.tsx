@@ -80,7 +80,7 @@ const Header = () => {
               className="border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black"
             >
               <Calendar className="mr-2 h-4 w-4" />
-              Book Court
+              Book a Court
             </Button>
           </div>
 
@@ -143,7 +143,7 @@ const Header = () => {
                   className="justify-start border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black"
                 >
                   <Calendar className="mr-2 h-4 w-4" />
-                  Book Court
+                  Book a Court
                 </Button>
               </div>
             </nav>
