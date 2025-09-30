@@ -30,7 +30,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/93ef227d-61c9-4604-9bbc-4f22b1f1d791.png" 
               alt="Kreede Logo" 
-              className="h-20"
+              className="h-14 sm:h-16 md:h-20"
             />
           </div>
 
