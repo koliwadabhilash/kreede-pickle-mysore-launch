@@ -1,16 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import CallBookModal from "./CallBookModal";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isCallModalOpen, setIsCallModalOpen] = useState(false);
 
   const handleBookCourt = () => {
     window.open("https://booking.example.com", "_blank");
   };
 
   const handleCallToBook = () => {
-    window.open("tel:+919845809169", "_self");
+    setIsCallModalOpen(true);
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -162,6 +164,8 @@ const Header = () => {
           </div>
         )}
       </div>
+      
+      <CallBookModal isOpen={isCallModalOpen} onClose={() => setIsCallModalOpen(false)} />
     </header>
   );
 };

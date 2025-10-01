@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Calendar } from "lucide-react";
 import { useEffect, useState } from "react";
 import zippyMascot from "@/assets/zippy-mascot.png";
+import CallBookModal from "./CallBookModal";
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isCallModalOpen, setIsCallModalOpen] = useState(false);
   
   const backgroundImages = [
     "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80", // Pickleball court
@@ -49,7 +51,7 @@ const HeroSection = () => {
   };
 
   const handleCallToBook = () => {
-    window.open("tel:+919845809169", "_self");
+    setIsCallModalOpen(true);
   };
 
   return (
@@ -137,6 +139,8 @@ const HeroSection = () => {
           className="w-32 h-32 object-contain drop-shadow-2xl"
         />
       </div>
+      
+      <CallBookModal isOpen={isCallModalOpen} onClose={() => setIsCallModalOpen(false)} />
     </section>
   );
 };
