@@ -1,12 +1,26 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Coffee, Users } from "lucide-react";
+import zippyMascot from "@/assets/zippy-mascot.png";
 
 const VenturesSection = () => {
   return (
     <section className="py-20 bg-kreede-black text-kreede-cream">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 relative">
+          {/* Zippy with snacks */}
+          <div className="flex justify-center items-center gap-4 mb-6">
+            <img 
+              src={zippyMascot} 
+              alt="Zippy the Fox with refreshments" 
+              className="w-24 h-24 object-contain"
+            />
+            <div className="bg-kreede-cream text-kreede-black px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+              <Coffee className="h-4 w-4" />
+              Our amazing ventures! 🦊
+            </div>
+          </div>
+
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our Current Ventures
           </h2>

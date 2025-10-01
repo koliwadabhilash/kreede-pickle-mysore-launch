@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Camera } from "lucide-react";
+import zippyMascot from "@/assets/zippy-mascot.png";
 
 const GallerySection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -46,7 +47,20 @@ const GallerySection = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-background to-kreede-cream/10">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 relative">
+          {/* Zippy as photographer */}
+          <div className="flex justify-center items-center gap-4 mb-6">
+            <img 
+              src={zippyMascot} 
+              alt="Zippy the Fox" 
+              className="w-20 h-20 object-contain"
+            />
+            <div className="bg-kreede-black text-kreede-cream px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+              <Camera className="h-4 w-4" />
+              Check out our awesome facilities! 📸
+            </div>
+          </div>
+          
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Our Gallery
           </h2>

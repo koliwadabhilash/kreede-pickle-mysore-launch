@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   const handleCallToBook = () => {
-    scrollToSection('contact');
+    window.open("tel:+919845809169", "_self");
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -47,6 +47,12 @@ const Header = () => {
               className="text-white hover:text-white/70 font-medium transition-colors text-lg"
             >
               About
+            </button>
+            <button 
+              onClick={() => scrollToSection('gallery')}
+              className="text-white hover:text-white/70 font-medium transition-colors text-lg"
+            >
+              Gallery
             </button>
             <button 
               onClick={() => scrollToSection('ventures')}
@@ -112,6 +118,12 @@ const Header = () => {
                 className="text-white hover:text-white/70 font-medium transition-colors text-left text-lg"
               >
                 About
+              </button>
+              <button 
+                onClick={() => scrollToSection('gallery')}
+                className="text-white hover:text-white/70 font-medium transition-colors text-left text-lg"
+              >
+                Gallery
               </button>
               <button 
                 onClick={() => scrollToSection('ventures')}

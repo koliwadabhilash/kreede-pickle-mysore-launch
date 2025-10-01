@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import zippyMascot from "@/assets/zippy-mascot.png";
 
 const Footer = () => {
   const handleEmailContact = () => {
@@ -93,10 +94,24 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-kreede-cream/20 mt-12 pt-8 text-center">
-          <p className="text-kreede-cream/60 text-sm">
-            © 2024 Kreede. All rights reserved. | Unite. Thrive. Play.
-          </p>
+        <div className="border-t border-kreede-cream/20 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            {/* Zippy waving goodbye */}
+            <div className="flex items-center gap-3">
+              <img 
+                src={zippyMascot} 
+                alt="Zippy waving goodbye" 
+                className="w-16 h-16 object-contain"
+              />
+              <span className="text-kreede-cream/80 text-sm">
+                See you on the court! 🦊👋
+              </span>
+            </div>
+            
+            <p className="text-kreede-cream/60 text-sm text-center">
+              © 2024 Kreede. All rights reserved. | Unite. Thrive. Play.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

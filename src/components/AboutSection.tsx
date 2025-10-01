@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Users, Trophy, MapPin } from "lucide-react";
+import zippyMascot from "@/assets/zippy-mascot.png";
 
 const AboutSection = () => {
   const features = [
@@ -28,7 +29,21 @@ const AboutSection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 relative">
+          {/* Zippy introducing About section */}
+          <div className="flex justify-center mb-6">
+            <div className="relative inline-block">
+              <img 
+                src={zippyMascot} 
+                alt="Zippy the Fox" 
+                className="w-24 h-24 object-contain animate-bounce"
+              />
+              <div className="absolute -top-2 -right-10 bg-kreede-black text-kreede-cream text-xs px-3 py-1 rounded-full font-bold whitespace-nowrap">
+                Let me tell you about us! 🦊
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             About Kreede
           </h2>

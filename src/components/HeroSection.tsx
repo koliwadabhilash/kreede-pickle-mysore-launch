@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Calendar } from "lucide-react";
 import { useEffect, useState } from "react";
+import zippyMascot from "@/assets/zippy-mascot.png";
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -48,10 +49,7 @@ const HeroSection = () => {
   };
 
   const handleCallToBook = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.open("tel:+919845809169", "_self");
   };
 
   return (
@@ -129,6 +127,15 @@ const HeroSection = () => {
         <div className="w-6 h-10 border-2 border-kreede-cream/50 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-kreede-cream/70 rounded-full mt-2"></div>
         </div>
+      </div>
+
+      {/* Zippy Mascot - Welcoming from bottom right */}
+      <div className="absolute bottom-8 right-8 z-20 animate-bounce hidden lg:block">
+        <img 
+          src={zippyMascot} 
+          alt="Zippy the Fox - Kreede Mascot" 
+          className="w-32 h-32 object-contain drop-shadow-2xl"
+        />
       </div>
     </section>
   );
