@@ -47,13 +47,13 @@ const GallerySection = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-background to-kreede-cream/10">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-6 md:mb-10 lg:mb-12 space-y-2">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+    <section className="py-20 bg-gradient-to-b from-background to-kreede-cream/10">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-6 md:mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4">
             Our Gallery
           </h2>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-sm md:text-xl text-foreground/70 max-w-2xl mx-auto">
             Premium facilities and vibrant community
           </p>
         </div>
@@ -76,35 +76,35 @@ const GallerySection = () => {
             {/* Navigation Arrows */}
             <button
               onClick={goToPrevious}
-              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-kreede-black/70 hover:bg-kreede-black text-kreede-cream p-2 sm:p-3 rounded-full transition-all hover:scale-110"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-kreede-black/70 hover:bg-kreede-black text-kreede-cream p-3 rounded-full transition-all hover:scale-110"
               aria-label="Previous image"
             >
-              <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
+              <ChevronLeft className="h-6 w-6" />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-kreede-black/70 hover:bg-kreede-black text-kreede-cream p-2 sm:p-3 rounded-full transition-all hover:scale-110"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-kreede-black/70 hover:bg-kreede-black text-kreede-cream p-3 rounded-full transition-all hover:scale-110"
               aria-label="Next image"
             >
-              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
+              <ChevronRight className="h-6 w-6" />
             </button>
 
             {/* Image Counter */}
-            <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 bg-kreede-black/70 text-kreede-cream px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-kreede-black/70 text-kreede-cream px-4 py-2 rounded-full text-sm font-medium">
               {currentImageIndex + 1} / {galleryImages.length}
             </div>
           </div>
 
           {/* Thumbnail Indicators */}
-          <div className="flex justify-center gap-1.5 sm:gap-2 mt-4 sm:mt-6">
+          <div className="flex justify-center gap-2 mt-6">
             {galleryImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`h-2 sm:h-2.5 md:h-3 rounded-full transition-all ${
+                className={`w-3 h-3 rounded-full transition-all ${
                   index === currentImageIndex 
-                    ? 'bg-kreede-black w-6 sm:w-7 md:w-8' 
-                    : 'bg-kreede-black/30 hover:bg-kreede-black/50 w-2 sm:w-2.5 md:w-3'
+                    ? 'bg-kreede-black w-8' 
+                    : 'bg-kreede-black/30 hover:bg-kreede-black/50'
                 }`}
                 aria-label={`Go to image ${index + 1}`}
               />
