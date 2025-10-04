@@ -31,21 +31,28 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center my-auto">
         <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4 md:space-y-6">
           {/* Hero Text */}
-          <div className="text-center">
-            <p className="text-kreede-cream text-[10px] sm:text-sm md:text-base lg:text-lg font-light mb-1">
+          <div className="text-center space-y-1 sm:space-y-2">
+            <p className="text-kreede-cream text-[10px] sm:text-xs md:text-sm lg:text-base font-light">
               Welcome to Mysuru's Fully Indoor
             </p>
-            <h1 className="text-kreede-cream text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold tracking-wider leading-tight my-1">
-              PICKLEBALL COURTS
+            <h1 className="text-kreede-cream text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold tracking-wider leading-none">
+              PICKLEBALL
             </h1>
-            <p className="text-kreede-cream text-[10px] sm:text-sm md:text-base lg:text-lg font-light mt-1">
+            <h1 className="text-kreede-cream text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold tracking-wider leading-none">
+              COURTS
+            </h1>
+            <p className="text-kreede-cream text-xs sm:text-sm md:text-base lg:text-xl font-light pt-1 sm:pt-2">
               Unite. Thrive. Play.
             </p>
           </div>
           
-          <p className="text-kreede-cream/80 text-[10px] sm:text-xs md:text-sm max-w-2xl mx-auto px-2">
-            Experience premium pickleball courts, connect with fellow players, and enjoy our thoughtfully curated snack bar.
-          </p>
+          <div className="pt-2 sm:pt-3 md:pt-4">
+            <p className="text-kreede-cream/80 text-[10px] sm:text-xs md:text-sm lg:text-base max-w-2xl mx-auto px-2 leading-relaxed">
+              Experience premium pickleball courts, connect with<br className="hidden sm:block" /> 
+              fellow players, and enjoy our thoughtfully<br className="hidden sm:block" /> 
+              curated snack bar.
+            </p>
+          </div>
 
           {/* Operating Hours Badge */}
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 bg-kreede-cream/10 backdrop-blur-sm rounded-full border border-kreede-cream/30">
