@@ -26,7 +26,7 @@ const Footer = () => {
               Mysuru's premier destination for pickleball and active living. Join us in building a community where sports, wellness, and friendships thrive.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/kreede_official?igsh=MTkxeGV6Y2NtYnN5bA%3D%3D" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
+              <a href="https://www.instagram.com/kreede_official/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="https://chat.whatsapp.com/C6ufGupeMMYBiFnyNgnIMZ" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">

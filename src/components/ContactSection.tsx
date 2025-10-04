@@ -69,7 +69,7 @@ const ContactSection = () => {
 
         {/* CTA Cards - Call & Book first for mobile */}
         <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
-          <Card className="group hover:shadow-sport transition-sport border-2 hover:border-kreede-black/20">
+          <Card className="group hover:shadow-sport transition-sport border-2 hover:border-kreede-black/20 cursor-pointer" onClick={handleCallToBook}>
             <CardContent className="p-8 text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-kreede-black text-kreede-cream rounded-full mb-6 group-hover:scale-110 transition-sport">
                 <Phone className="h-8 w-8" />
@@ -78,7 +78,7 @@ const ContactSection = () => {
               <p className="text-foreground/70 mb-6 leading-relaxed">
                 Prefer to speak with us directly? Call us and we'll help you find the perfect time to play.
               </p>
-              <div className="bg-kreede-black text-kreede-cream px-6 py-4 rounded-lg flex items-center justify-center gap-2 text-lg font-semibold min-h-[56px]">
+              <div className="bg-kreede-black text-kreede-cream px-6 py-4 rounded-lg flex items-center justify-center gap-2 text-lg font-semibold min-h-[56px] group-hover:bg-kreede-black/90 transition-colors">
                 <Phone className="h-5 w-5" />
                 +91 96060 55181
               </div>
@@ -169,7 +169,7 @@ const ContactSection = () => {
               </div>
               <div className="flex justify-center gap-4 mb-4">
                 <a 
-                  href="https://www.instagram.com/kreede_official?igsh=MTkxeGV6Y2NtYnN5bA%3D%3D" 
+                  href="https://www.instagram.com/kreede_official/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white rounded-2xl hover:scale-110 transition-all shadow-lg"

@@ -140,21 +140,19 @@ const Header = () => {
                 Contact
               </button>
               
-              <div className="flex flex-col gap-3 pt-4">
+              <div className="flex flex-col gap-2 pt-4">
                 <Button 
                   variant="outline" 
-                  size="sm"
                   onClick={handleCallToBook}
-                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black"
+                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black h-10 text-sm"
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   Call & Book
                 </Button>
                 <Button 
                   variant="outline" 
-                  size="sm"
                   disabled
-                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black opacity-60 cursor-not-allowed"
+                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black opacity-60 cursor-not-allowed h-10 text-sm"
                 >
                   <Calendar className="mr-2 h-4 w-4" />
                   Book a Court (Coming Soon)

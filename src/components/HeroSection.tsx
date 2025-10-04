@@ -57,12 +57,12 @@ const HeroSection = () => {
             <p className="text-kreede-cream text-sm sm:text-lg md:text-xl lg:text-2xl font-light mb-1">
               Welcome to Mysuru's Fully Indoor
             </p>
-            <div className="-mt-1 mb-0">
+            <div className="-mt-1 mb-2 md:mb-0">
               <h1 className="text-kreede-cream text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wider leading-tight">
                 PICKLEBALL COURTS
               </h1>
             </div>
-            <p className="text-kreede-cream text-sm sm:text-lg md:text-xl lg:text-2xl font-light -mt-2">
+            <p className="text-kreede-cream text-sm sm:text-lg md:text-xl lg:text-2xl font-light mt-1 md:-mt-2">
               Unite. Thrive. Play.
             </p>
           </div>
@@ -73,28 +73,26 @@ const HeroSection = () => {
           </p>
 
           {/* Operating Hours Badge */}
-          <div className="mb-8 inline-flex items-center gap-3 px-6 py-4 bg-kreede-cream/10 backdrop-blur-sm rounded-full border-2 border-kreede-cream/30">
-            <Clock className="h-6 w-6 text-kreede-cream" />
-            <span className="text-kreede-cream font-bold text-lg">
+          <div className="mb-6 md:mb-8 inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-4 bg-kreede-cream/10 backdrop-blur-sm rounded-full border border-kreede-cream/30 md:border-2">
+            <Clock className="h-4 w-4 md:h-6 md:w-6 text-kreede-cream" />
+            <span className="text-kreede-cream font-bold text-sm md:text-lg">
               Open 6 AM - 11 PM | 7 Days a Week
             </span>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center px-4">
             <Button 
-              size="lg" 
               onClick={handleCallToBook}
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto sm:min-w-[200px] bg-kreede-cream text-kreede-black hover:bg-kreede-cream/90 border border-kreede-cream"
+              className="text-sm sm:text-lg px-5 sm:px-8 py-2.5 sm:py-4 h-auto w-full sm:w-auto sm:min-w-[200px] bg-kreede-cream text-kreede-black hover:bg-kreede-cream/90 border border-kreede-cream"
             >
               <Phone className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
               Call & Book
             </Button>
             
             <Button 
-              size="lg"
               disabled
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto sm:min-w-[200px] bg-kreede-cream text-kreede-black opacity-60 cursor-not-allowed border border-kreede-cream"
+              className="text-sm sm:text-lg px-5 sm:px-8 py-2.5 sm:py-4 h-auto w-full sm:w-auto sm:min-w-[200px] bg-kreede-cream text-kreede-black opacity-60 cursor-not-allowed border border-kreede-cream"
             >
               <Calendar className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
               Book a Court (Coming Soon)
@@ -106,12 +104,12 @@ const HeroSection = () => {
             href="https://maps.app.goo.gl/df54eiUaB4ythams7"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 md:mt-12 inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-kreede-cream/10 backdrop-blur-sm rounded-full border border-kreede-cream/20 hover:bg-kreede-cream/20 hover:border-kreede-cream/40 transition-all duration-300 group"
+            className="mt-6 md:mt-12 inline-flex items-center gap-2 px-3 sm:px-6 py-1.5 sm:py-3 bg-kreede-cream/10 backdrop-blur-sm rounded-full border border-kreede-cream/20 hover:bg-kreede-cream/20 hover:border-kreede-cream/40 transition-all duration-300 group"
           >
-            <span className="text-kreede-cream/90 group-hover:text-kreede-cream font-medium text-sm sm:text-base transition-colors">
+            <span className="text-kreede-cream/90 group-hover:text-kreede-cream font-medium text-xs sm:text-base transition-colors">
               📍 Hebbal, Mysuru
             </span>
-            <span className="text-kreede-cream/70 group-hover:text-kreede-cream/90 text-xs sm:text-sm transition-colors">
+            <span className="text-kreede-cream/70 group-hover:text-kreede-cream/90 text-xs transition-colors">
               (Get Directions)
             </span>
           </a>

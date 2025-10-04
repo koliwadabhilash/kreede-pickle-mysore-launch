@@ -49,17 +49,17 @@ const GallerySection = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-background to-kreede-cream/10">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-6 md:mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4">
             Our Gallery
           </h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Take a look at our premium facilities and vibrant community
+          <p className="text-sm md:text-xl text-foreground/70 max-w-2xl mx-auto">
+            Premium facilities and vibrant community
           </p>
         </div>
 
         {/* Slideshow Container */}
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           <div className="relative aspect-video overflow-hidden rounded-2xl shadow-2xl">
             {/* Images */}
             {galleryImages.map((image, index) => (
