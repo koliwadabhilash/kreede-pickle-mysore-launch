@@ -5,7 +5,6 @@ import GallerySection from "@/components/GallerySection";
 import VenturesSection from "@/components/VenturesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import ZippyFloatingHelper from "@/components/ZippyFloatingHelper";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -74,7 +73,6 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <ZippyFloatingHelper />
       <main>
         <div id="hero">
           <HeroSection />

@@ -1,27 +1,25 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Camera } from "lucide-react";
-import zippyMascot from "@/assets/zippy-mascot.png";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const GallerySection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  // Placeholder images - will be replaced with actual photos
   const galleryImages = [
     {
-      url: "/lovable-uploads/049ec9e9-9036-4827-a003-03490f60d983.png",
-      alt: "Pickleball Court View 1"
+      url: "/lovable-uploads/kreede-court-1.jpeg",
+      alt: "Kreede Pickleball Courts - Indoor Facility with Seating"
     },
     {
-      url: "/lovable-uploads/2f368600-c4a1-4e0f-9443-56d6df43ad2c.png",
-      alt: "Pickleball Court View 2"
+      url: "/lovable-uploads/kreede-court-2.jpeg",
+      alt: "Kreede Pickleball Courts - Multiple Professional Courts"
     },
     {
-      url: "/lovable-uploads/355f6fab-2868-46d7-b9ec-54eeac7fc199.png",
-      alt: "Pickleball Court View 3"
+      url: "/lovable-uploads/kreede-court-3.jpeg",
+      alt: "Kreede Pickleball Courts - Spacious Indoor Arena"
     },
     {
-      url: "/lovable-uploads/5794e2fc-e136-4926-ace9-13a3b803a0c7.png",
-      alt: "Pickleball Court View 4"
+      url: "/lovable-uploads/kreede-court-4.jpeg",
+      alt: "Kreede Pickleball Courts - Spectator Seating Area"
     }
   ];
 
@@ -47,20 +45,7 @@ const GallerySection = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-background to-kreede-cream/10">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12 relative">
-          {/* Zippy as photographer */}
-          <div className="flex justify-center items-center gap-4 mb-6">
-            <img 
-              src={zippyMascot} 
-              alt="Zippy the Fox" 
-              className="w-20 h-20 object-contain"
-            />
-            <div className="bg-kreede-black text-kreede-cream px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-              <Camera className="h-4 w-4" />
-              Check out our awesome facilities! 📸
-            </div>
-          </div>
-          
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Our Gallery
           </h2>

@@ -1,4 +1,4 @@
-import { Phone, X, Copy } from "lucide-react";
+import { Phone, Copy } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -7,8 +7,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import zippyMascot from "@/assets/zippy-mascot.png";
 import { useToast } from "@/hooks/use-toast";
+import { useEffect, useState } from "react";
 
 interface CallBookModalProps {
   isOpen: boolean;
@@ -18,6 +18,24 @@ interface CallBookModalProps {
 const CallBookModal = ({ isOpen, onClose }: CallBookModalProps) => {
   const { toast } = useToast();
   const phoneNumber = "+91 98458 09169";
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Detect if user is on mobile device
+    const checkMobile = () => {
+      const mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      setIsMobile(mobile);
+      
+      // If on mobile and modal opens, directly initiate call and close modal
+      if (mobile && isOpen) {
+        window.location.href = `tel:${phoneNumber}`;
+        // Small delay before closing to ensure tel: link is triggered
+        setTimeout(() => onClose(), 100);
+      }
+    };
+    
+    checkMobile();
+  }, [isOpen, phoneNumber, onClose]);
 
   const handleCopyNumber = () => {
     navigator.clipboard.writeText(phoneNumber);
@@ -26,11 +44,13 @@ const CallBookModal = ({ isOpen, onClose }: CallBookModalProps) => {
       description: "Phone number copied to clipboard",
       duration: 2000,
     });
+    onClose();
   };
 
-  const handleCallNow = () => {
-    window.open(`tel:${phoneNumber}`, "_self");
-  };
+  // If mobile, don't render the modal content since we're redirecting
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -45,19 +65,7 @@ const CallBookModal = ({ isOpen, onClose }: CallBookModalProps) => {
         </DialogHeader>
 
         <div className="flex flex-col items-center gap-6 py-6">
-          {/* Zippy pointing to phone number */}
-          <div className="flex items-center gap-4">
-            <img 
-              src={zippyMascot} 
-              alt="Zippy the Fox" 
-              className="w-24 h-24 object-contain animate-bounce"
-            />
-            <div className="bg-kreede-cream text-kreede-black px-4 py-2 rounded-xl text-sm font-bold">
-              Call me! I'm ready to help! 🦊
-            </div>
-          </div>
-
-          {/* Phone Number Display */}
+          {/* Phone Number Display - Desktop Only */}
           <div className="w-full bg-kreede-black text-kreede-cream rounded-2xl p-8 text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Phone className="h-8 w-8" />
@@ -65,32 +73,18 @@ const CallBookModal = ({ isOpen, onClose }: CallBookModalProps) => {
                 Call Us Now
               </p>
             </div>
-            <a 
-              href={`tel:${phoneNumber}`}
-              className="text-4xl font-bold hover:text-kreede-cream/90 transition-colors block mb-4"
-            >
+            <p className="text-4xl font-bold mb-4">
               {phoneNumber}
-            </a>
+            </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 mt-6">
-              <Button
-                onClick={handleCallNow}
-                className="flex-1 bg-kreede-cream text-kreede-black hover:bg-kreede-cream/90"
-                size="lg"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </Button>
-              <Button
-                onClick={handleCopyNumber}
-                variant="outline"
-                className="flex-1 border-kreede-cream text-kreede-cream hover:bg-kreede-cream/10"
-                size="lg"
-              >
-                <Copy className="mr-2 h-5 w-5" />
-                Copy Number
-              </Button>
-            </div>
+            <Button
+              onClick={handleCopyNumber}
+              className="w-full bg-kreede-cream text-kreede-black hover:bg-kreede-cream/90"
+              size="lg"
+            >
+              <Copy className="mr-2 h-5 w-5" />
+              Copy Number
+            </Button>
           </div>
 
           {/* Additional Info */}

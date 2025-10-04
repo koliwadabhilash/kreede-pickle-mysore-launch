@@ -1,26 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Coffee, Users } from "lucide-react";
-import zippyMascot from "@/assets/zippy-mascot.png";
+import { Coffee, Users } from "lucide-react";
 
 const VenturesSection = () => {
   return (
     <section className="py-20 bg-kreede-black text-kreede-cream">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 relative">
-          {/* Zippy with snacks */}
-          <div className="flex justify-center items-center gap-4 mb-6">
-            <img 
-              src={zippyMascot} 
-              alt="Zippy the Fox with refreshments" 
-              className="w-24 h-24 object-contain"
-            />
-            <div className="bg-kreede-cream text-kreede-black px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-              <Coffee className="h-4 w-4" />
-              Our amazing ventures! 🦊
-            </div>
-          </div>
-
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our Current Ventures
           </h2>
@@ -61,15 +46,6 @@ const VenturesSection = () => {
                   <span>Community Tournaments</span>
                 </div>
               </div>
-
-              <Button 
-                variant="kreede-primary" 
-                size="lg"
-                className="w-full group-hover:scale-105 transition-sport mt-auto"
-              >
-                Learn More About Pickleball
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
             </CardContent>
           </Card>
 
@@ -78,7 +54,7 @@ const VenturesSection = () => {
             <CardHeader className="text-center pb-6">
               <div className="mb-6">
                 <img 
-                  src="/lovable-uploads/049ec9e9-9036-4827-a003-03490f60d983.png" 
+                  src="/lovable-uploads/snack-bar-logo.png" 
                   alt="Snack Bar Logo" 
                   className="h-36 mx-auto"
                 />
@@ -104,15 +80,6 @@ const VenturesSection = () => {
                   <span>Social Community Space</span>
                 </div>
               </div>
-
-              <Button 
-                variant="kreede-primary" 
-                size="lg"
-                className="w-full group-hover:scale-105 transition-sport mt-auto"
-              >
-                Explore Menu
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
             </CardContent>
           </Card>
         </div>

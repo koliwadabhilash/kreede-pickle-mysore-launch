@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Users, Trophy, MapPin } from "lucide-react";
-import zippyMascot from "@/assets/zippy-mascot.png";
+import { Button } from "@/components/ui/button";
 
 const AboutSection = () => {
   const features = [
@@ -17,7 +17,8 @@ const AboutSection = () => {
     {
       icon: <Users className="h-8 w-8" />,
       title: "Community",
-      description: "Kreede is not just a facility—it's a lifestyle movement designed to foster active living and social engagement in Mysuru."
+      description: "Kreede is not just a facility—it's a lifestyle movement designed to foster active living and social engagement in Mysuru.",
+      hasButton: true
     },
     {
       icon: <MapPin className="h-8 w-8" />,
@@ -30,20 +31,6 @@ const AboutSection = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 relative">
-          {/* Zippy introducing About section */}
-          <div className="flex justify-center mb-6">
-            <div className="relative inline-block">
-              <img 
-                src={zippyMascot} 
-                alt="Zippy the Fox" 
-                className="w-24 h-24 object-contain animate-bounce"
-              />
-              <div className="absolute -top-2 -right-10 bg-kreede-black text-kreede-cream text-xs px-3 py-1 rounded-full font-bold whitespace-nowrap">
-                Let me tell you about us! 🦊
-              </div>
-            </div>
-          </div>
-
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             About Kreede
           </h2>
@@ -62,9 +49,19 @@ const AboutSection = () => {
                 <h3 className="text-xl font-bold text-foreground mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-foreground/90 leading-relaxed font-medium">
+                <p className="text-foreground/90 leading-relaxed font-medium mb-6">
                   {feature.description}
                 </p>
+                {feature.hasButton && (
+                  <Button 
+                    variant="kreede-primary"
+                    size="sm"
+                    className="w-full"
+                    onClick={() => window.open("https://chat.whatsapp.com/kreede", "_blank")}
+                  >
+                    Join WhatsApp Community
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}

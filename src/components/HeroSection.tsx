@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Calendar } from "lucide-react";
+import { ArrowRight, Phone, Calendar, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
-import zippyMascot from "@/assets/zippy-mascot.png";
 import CallBookModal from "./CallBookModal";
 
 const HeroSection = () => {
@@ -77,7 +76,7 @@ const HeroSection = () => {
           {/* Hero Text */}
           <div className="text-center mb-6">
             <p className="text-kreede-cream text-sm sm:text-lg md:text-xl lg:text-2xl font-light mb-1">
-              Welcome to Mysuru's Premium
+              Welcome to Mysuru's Fully Indoor
             </p>
             <div className="-mt-1 mb-0">
               <h1 className="text-kreede-cream text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wider leading-tight">
@@ -93,6 +92,14 @@ const HeroSection = () => {
           <p className="text-kreede-cream/80 text-sm sm:text-base md:text-lg mb-8 md:mb-12 max-w-3xl mx-auto px-4">
             Experience premium pickleball courts, connect with fellow players, and enjoy our thoughtfully curated snack bar. Join the fastest-growing sport in the world at Kreede.
           </p>
+
+          {/* Operating Hours Badge */}
+          <div className="mb-8 inline-flex items-center gap-3 px-6 py-4 bg-kreede-cream/10 backdrop-blur-sm rounded-full border-2 border-kreede-cream/30">
+            <Clock className="h-6 w-6 text-kreede-cream" />
+            <span className="text-kreede-cream font-bold text-lg">
+              Open 6 AM - 11 PM | 7 Days a Week
+            </span>
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
@@ -129,15 +136,6 @@ const HeroSection = () => {
         <div className="w-6 h-10 border-2 border-kreede-cream/50 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-kreede-cream/70 rounded-full mt-2"></div>
         </div>
-      </div>
-
-      {/* Zippy Mascot - Welcoming from bottom right */}
-      <div className="absolute bottom-8 right-8 z-20 animate-bounce hidden lg:block">
-        <img 
-          src={zippyMascot} 
-          alt="Zippy the Fox - Kreede Mascot" 
-          className="w-32 h-32 object-contain drop-shadow-2xl"
-        />
       </div>
       
       <CallBookModal isOpen={isCallModalOpen} onClose={() => setIsCallModalOpen(false)} />

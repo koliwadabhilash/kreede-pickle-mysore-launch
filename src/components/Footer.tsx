@@ -1,5 +1,4 @@
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
-import zippyMascot from "@/assets/zippy-mascot.png";
 
 const Footer = () => {
   const handleEmailContact = () => {
@@ -69,7 +68,19 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-kreede-cream/60" />
-                <span className="text-kreede-cream/80">Vijayanagar 1st stage, Mysuru</span>
+                <div className="text-kreede-cream/80 text-left">
+                  <div>1622, Manchegowdana koppalu,</div>
+                  <div>Hebbal 2nd Stage, Mysuru</div>
+                  <div>Karnataka 570016, India</div>
+                  <a 
+                    href="https://maps.app.goo.gl/df54eiUaB4ythams7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-kreede-cream/60 hover:text-kreede-cream transition-colors inline-block mt-1"
+                  >
+                    📍 View on Google Maps
+                  </a>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-kreede-cream/60" />
@@ -95,19 +106,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-kreede-cream/20 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Zippy waving goodbye */}
-            <div className="flex items-center gap-3">
-              <img 
-                src={zippyMascot} 
-                alt="Zippy waving goodbye" 
-                className="w-16 h-16 object-contain"
-              />
-              <span className="text-kreede-cream/80 text-sm">
-                See you on the court! 🦊👋
-              </span>
-            </div>
-            
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <p className="text-kreede-cream/60 text-sm text-center">
               © 2024 Kreede. All rights reserved. | Unite. Thrive. Play.
             </p>
