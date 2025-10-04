@@ -8,7 +8,7 @@ const Header = () => {
   const [isCallModalOpen, setIsCallModalOpen] = useState(false);
 
   const handleBookCourt = () => {
-    window.open("https://booking.example.com", "_blank");
+    // Coming soon - no action
   };
 
   const handleCallToBook = () => {
@@ -84,11 +84,11 @@ const Header = () => {
             <Button 
               variant="outline" 
               size="sm"
-              onClick={handleBookCourt}
-              className="border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black"
+              disabled
+              className="border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black opacity-60 cursor-not-allowed"
             >
               <Calendar className="mr-2 h-4 w-4" />
-              Book a Court
+              Book a Court (Coming Soon)
             </Button>
           </div>
 
@@ -153,11 +153,11 @@ const Header = () => {
                 <Button 
                   variant="outline" 
                   size="sm"
-                  onClick={handleBookCourt}
-                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black"
+                  disabled
+                  className="justify-start border-white text-kreede-black bg-white hover:bg-white/90 hover:text-kreede-black opacity-60 cursor-not-allowed"
                 >
                   <Calendar className="mr-2 h-4 w-4" />
-                  Book a Court
+                  Book a Court (Coming Soon)
                 </Button>
               </div>
             </nav>

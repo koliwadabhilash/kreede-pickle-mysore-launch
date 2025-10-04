@@ -12,7 +12,7 @@ const ContactSection = () => {
   };
 
   const handleCallToBook = () => {
-    window.open("tel:+919845809169", "_self");
+    window.open("tel:+919606055181", "_self");
   };
 
   const handleEmailContact = () => {
@@ -80,12 +80,12 @@ const ContactSection = () => {
               </p>
               <div className="bg-kreede-black text-kreede-cream px-6 py-4 rounded-lg flex items-center justify-center gap-2 text-lg font-semibold min-h-[56px]">
                 <Phone className="h-5 w-5" />
-                +91 98458 09169
+                +91 96060 55181
               </div>
             </CardContent>
           </Card>
 
-          <Card className="group hover:shadow-sport transition-sport border-2 hover:border-kreede-black/20 cursor-pointer" onClick={handleBookCourt}>
+          <Card className="group hover:shadow-sport transition-sport border-2 hover:border-kreede-black/20">
             <CardContent className="p-8 text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-kreede-black text-kreede-cream rounded-full mb-6 group-hover:scale-110 transition-sport">
                 <Calendar className="h-8 w-8" />
@@ -94,9 +94,8 @@ const ContactSection = () => {
               <p className="text-foreground/70 mb-6 leading-relaxed">
                 Use our external booking platform to reserve your court time. Select your preferred slot and play!
               </p>
-              <Button variant="kreede-primary" size="lg" className="w-full min-h-[56px]">
-                Book a Court
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button variant="kreede-primary" size="lg" className="w-full min-h-[56px]" disabled>
+                Book a Court (Coming Soon)
               </Button>
             </CardContent>
           </Card>
@@ -138,7 +137,7 @@ const ContactSection = () => {
               </div>
               <p className="text-foreground text-lg font-bold hover:text-kreede-black transition-colors">
                 kreedesporting@gmail.com<br />
-                <span className="text-foreground text-lg font-bold">+91 98458 09169</span>
+                <span className="text-foreground text-lg font-bold">+91 96060 55181</span>
               </p>
             </CardContent>
           </Card>
@@ -170,7 +169,7 @@ const ContactSection = () => {
               </div>
               <div className="flex justify-center gap-4 mb-4">
                 <a 
-                  href="https://www.instagram.com/kreede_official/" 
+                  href="https://www.instagram.com/kreede_official?igsh=MTkxeGV6Y2NtYnN5bA%3D%3D" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-white rounded-2xl hover:scale-110 transition-all shadow-lg"
@@ -181,7 +180,7 @@ const ContactSection = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://chat.whatsapp.com/kreede" 
+                  href="https://chat.whatsapp.com/C6ufGupeMMYBiFnyNgnIMZ" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-2xl hover:scale-110 transition-all shadow-lg"

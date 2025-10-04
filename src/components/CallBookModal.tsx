@@ -17,7 +17,7 @@ interface CallBookModalProps {
 
 const CallBookModal = ({ isOpen, onClose }: CallBookModalProps) => {
   const { toast } = useToast();
-  const phoneNumber = "+91 98458 09169";
+  const phoneNumber = "+91 96060 55181";
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
