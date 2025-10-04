@@ -47,7 +47,7 @@ const GallerySection = () => {
   };
 
   return (
-    <section className="pt-32 pb-20 bg-gradient-to-b from-background to-kreede-cream/10">
+    <section className="py-20 bg-gradient-to-b from-background to-kreede-cream/10">
       <div className="container mx-auto px-6">
         <div className="text-center mb-6 md:mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4">
