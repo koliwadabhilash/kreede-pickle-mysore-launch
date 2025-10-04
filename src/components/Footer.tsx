@@ -29,9 +29,9 @@ const Footer = () => {
               <a href="https://www.instagram.com/kreede_official/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <div className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center opacity-50 cursor-not-allowed">
-                <span className="text-xs">WA</span>
-              </div>
+              <a href="https://chat.whatsapp.com/your-community-link" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
+                <span className="text-xs font-bold">WA</span>
+              </a>
             </div>
           </div>
 
@@ -66,39 +66,28 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6">Contact</h3>
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 text-kreede-cream/60" />
+              <div className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 text-kreede-cream/60 mt-0.5" />
                 <div className="text-kreede-cream/80 text-left">
                   <div>1622, Manchegowdana koppalu,</div>
                   <div>Hebbal 2nd Stage, Mysuru</div>
                   <div>Karnataka 570016, India</div>
-                  <a 
-                    href="https://maps.app.goo.gl/df54eiUaB4ythams7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-kreede-cream/60 hover:text-kreede-cream transition-colors inline-block mt-1"
-                  >
+                  <div className="text-xs text-kreede-cream/60 mt-1">
                     📍 View on Google Maps
-                  </a>
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-kreede-cream/60" />
-                <button 
-                  onClick={handleCallToBook}
-                  className="text-kreede-cream/80 hover:text-kreede-cream transition-colors"
-                >
+                <span className="text-kreede-cream/80">
                   +91 98458 09169
-                </button>
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-kreede-cream/60" />
-                <button 
-                  onClick={handleEmailContact}
-                  className="text-kreede-cream/80 hover:text-kreede-cream transition-colors"
-                >
+                <span className="text-kreede-cream/80">
                   kreedesporting@gmail.com
-                </button>
+                </span>
               </div>
             </div>
           </div>
@@ -108,7 +97,7 @@ const Footer = () => {
         <div className="border-t border-kreede-cream/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <p className="text-kreede-cream/60 text-sm text-center">
-              © 2024 Kreede. All rights reserved. | Unite. Thrive. Play.
+              © 2025 Kreede. All rights reserved. | Unite. Thrive. Play.
             </p>
           </div>
         </div>
