@@ -93,11 +93,11 @@ const HeroSection = () => {
             
             <Button 
               size="lg"
-              onClick={handleBookCourt}
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto sm:min-w-[200px] bg-kreede-cream text-kreede-black hover:bg-kreede-cream/90 border border-kreede-cream"
+              disabled
+              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto sm:min-w-[200px] bg-kreede-cream text-kreede-black opacity-60 cursor-not-allowed border border-kreede-cream"
             >
               <Calendar className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
-              Book a Court
+              Book a Court (Coming Soon)
             </Button>
           </div>
 

@@ -57,7 +57,7 @@ const AboutSection = () => {
                     variant="kreede-primary"
                     size="sm"
                     className="w-full"
-                    onClick={() => window.open("https://chat.whatsapp.com/kreede", "_blank")}
+                    onClick={() => window.open("https://chat.whatsapp.com/C6ufGupeMMYBiFnyNgnIMZ", "_blank")}
                   >
                     Join WhatsApp Community
                   </Button>
