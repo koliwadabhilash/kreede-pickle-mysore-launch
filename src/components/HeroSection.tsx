@@ -122,20 +122,20 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Location Badge with Google Maps Link */}
-          <div className="mt-8 md:mt-12 inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-kreede-cream/10 backdrop-blur-sm rounded-full border border-kreede-cream/20">
-            <span className="text-kreede-cream/90 font-medium text-sm sm:text-base mr-3">
-              📍 Mysuru, Karnataka
+          {/* Location Badge - Fully Clickable */}
+          <a 
+            href="https://maps.app.goo.gl/df54eiUaB4ythams7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 md:mt-12 inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-kreede-cream/10 backdrop-blur-sm rounded-full border border-kreede-cream/20 hover:bg-kreede-cream/20 hover:border-kreede-cream/40 transition-all duration-300 group"
+          >
+            <span className="text-kreede-cream/90 group-hover:text-kreede-cream font-medium text-sm sm:text-base transition-colors">
+              📍 Hebbal, Mysuru
             </span>
-            <a 
-              href="https://maps.app.goo.gl/df54eiUaB4ythams7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-kreede-cream/90 hover:text-kreede-cream font-medium text-sm sm:text-base underline transition-colors"
-            >
-              Get Directions
-            </a>
-          </div>
+            <span className="text-kreede-cream/70 group-hover:text-kreede-cream/90 text-xs sm:text-sm transition-colors">
+              (Get Directions)
+            </span>
+          </a>
         </div>
       </div>
 

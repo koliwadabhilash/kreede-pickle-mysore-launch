@@ -45,12 +45,6 @@ const Header = () => {
               Home
             </button>
             <button 
-              onClick={() => scrollToSection('about')}
-              className="text-white hover:text-white/70 font-medium transition-colors text-lg"
-            >
-              About
-            </button>
-            <button 
               onClick={() => scrollToSection('gallery')}
               className="text-white hover:text-white/70 font-medium transition-colors text-lg"
             >
@@ -61,6 +55,12 @@ const Header = () => {
               className="text-white hover:text-white/70 font-medium transition-colors text-lg"
             >
               Our Ventures
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-white hover:text-white/70 font-medium transition-colors text-lg"
+            >
+              About
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
@@ -116,12 +116,6 @@ const Header = () => {
                 Home
               </button>
               <button 
-                onClick={() => scrollToSection('about')}
-                className="text-white hover:text-white/70 font-medium transition-colors text-left text-lg"
-              >
-                About
-              </button>
-              <button 
                 onClick={() => scrollToSection('gallery')}
                 className="text-white hover:text-white/70 font-medium transition-colors text-left text-lg"
               >
@@ -132,6 +126,12 @@ const Header = () => {
                 className="text-white hover:text-white/70 font-medium transition-colors text-left text-lg"
               >
                 Our Ventures
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="text-white hover:text-white/70 font-medium transition-colors text-left text-lg"
+              >
+                About
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}

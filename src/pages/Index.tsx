@@ -77,14 +77,14 @@ const Index = () => {
         <div id="hero">
           <HeroSection />
         </div>
-        <div id="about">
-          <AboutSection />
-        </div>
         <div id="gallery">
           <GallerySection />
         </div>
         <div id="ventures">
           <VenturesSection />
+        </div>
+        <div id="about">
+          <AboutSection />
         </div>
         <div id="contact">
           <ContactSection />
