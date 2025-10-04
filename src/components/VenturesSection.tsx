@@ -54,7 +54,7 @@ const VenturesSection = () => {
             <CardHeader className="text-center pb-6">
               <div className="mb-6">
                 <img 
-                  src="/lovable-uploads/snack-bar-logo.png" 
+                  src="/lovable-uploads/snack-bar-logo-new.jpeg" 
                   alt="Snack Bar Logo" 
                   className="h-36 mx-auto"
                 />
