@@ -29,7 +29,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/kreede_official/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://chat.whatsapp.com/your-community-link" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
+              <a href="https://chat.whatsapp.com/kreede" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
                 <span className="text-xs font-bold">WA</span>
               </a>
             </div>
@@ -72,9 +72,6 @@ const Footer = () => {
                   <div>1622, Manchegowdana koppalu,</div>
                   <div>Hebbal 2nd Stage, Mysuru</div>
                   <div>Karnataka 570016, India</div>
-                  <div className="text-xs text-kreede-cream/60 mt-1">
-                    📍 View on Google Maps
-                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-3">

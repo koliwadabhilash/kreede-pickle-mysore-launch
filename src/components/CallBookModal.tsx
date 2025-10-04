@@ -56,10 +56,10 @@ const CallBookModal = ({ isOpen, onClose }: CallBookModalProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center">
+          <DialogTitle className="text-2xl font-bold text-center text-kreede-black">
             Call & Book Your Court
           </DialogTitle>
-          <DialogDescription className="text-center">
+          <DialogDescription className="text-center text-kreede-black/70">
             Reach out to us directly to reserve your spot
           </DialogDescription>
         </DialogHeader>
@@ -88,8 +88,8 @@ const CallBookModal = ({ isOpen, onClose }: CallBookModalProps) => {
           </div>
 
           {/* Additional Info */}
-          <div className="text-center text-sm text-muted-foreground">
-            <p className="font-semibold mb-1">Available Hours</p>
+          <div className="text-center text-sm text-kreede-black/70">
+            <p className="font-semibold mb-1 text-kreede-black">Available Hours</p>
             <p>6 AM - 11 PM, 7 Days a Week</p>
           </div>
         </div>

@@ -7,7 +7,7 @@ const VenturesSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Current Ventures
+            Our Ventures
           </h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
             We are proud to launch two flagship ventures under the Kreede umbrella, representing our first step toward a larger vision of blending fitness, sport, and community.
