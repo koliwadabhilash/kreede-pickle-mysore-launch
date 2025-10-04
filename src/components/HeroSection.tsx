@@ -5,28 +5,6 @@ import CallBookModal from "./CallBookModal";
 
 const HeroSection = () => {
   const [isCallModalOpen, setIsCallModalOpen] = useState(false);
-  
-
-  // Debug logging to track what's causing scroll resets
-  useEffect(() => {
-    const originalScrollTo = window.scrollTo;
-    const originalScrollIntoView = Element.prototype.scrollIntoView;
-    
-    window.scrollTo = function(...args) {
-      console.log('scrollTo called:', args, new Error().stack);
-      return originalScrollTo.apply(this, args);
-    };
-    
-    Element.prototype.scrollIntoView = function(...args) {
-      console.log('scrollIntoView called on:', this, args, new Error().stack);
-      return originalScrollIntoView.apply(this, args);
-    };
-    
-    return () => {
-      window.scrollTo = originalScrollTo;
-      Element.prototype.scrollIntoView = originalScrollIntoView;
-    };
-  }, []);
 
   const handleBookCourt = () => {
     // Redirect to external booking software
