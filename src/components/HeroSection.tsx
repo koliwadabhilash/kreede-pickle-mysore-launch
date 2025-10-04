@@ -4,24 +4,8 @@ import { useEffect, useState } from "react";
 import CallBookModal from "./CallBookModal";
 
 const HeroSection = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isCallModalOpen, setIsCallModalOpen] = useState(false);
   
-  const backgroundImages = [
-    "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80", // Pickleball court
-    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80", // People playing pickleball
-    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80", // Pickleball racket and ball
-    "https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" // Pickleball match
-  ];
-
-  // Background slideshow effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [backgroundImages.length]);
 
   // Debug logging to track what's causing scroll resets
   useEffect(() => {
@@ -55,19 +39,14 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Background Slideshow with Overlay */}
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        {backgroundImages.map((image, index) => (
-          <img 
-            key={index}
-            src={image} 
-            alt={`Pickleball Court ${index + 1}`} 
-            className={`absolute inset-0 w-full h-full object-cover opacity-40 transition-opacity duration-1000 ${
-              index === currentImageIndex ? 'opacity-40' : 'opacity-0'
-            }`}
-          />
-        ))}
-        <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
+        <img 
+          src="/lovable-uploads/kreede-court-3.jpeg" 
+          alt="Kreede Pickleball Courts" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-kreede-black/70"></div>
       </div>
 
       {/* Content */}

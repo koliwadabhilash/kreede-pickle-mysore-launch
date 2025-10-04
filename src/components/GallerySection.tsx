@@ -18,8 +18,8 @@ const GallerySection = () => {
       alt: "Kreede Pickleball Courts - Spacious Indoor Arena"
     },
     {
-      url: "/lovable-uploads/kreede-court-4.jpeg",
-      alt: "Kreede Pickleball Courts - Spectator Seating Area"
+      url: "/lovable-uploads/kreede-court-5.jpg",
+      alt: "Kreede Pickleball Courts - Indoor Courts in Action"
     }
   ];
 
