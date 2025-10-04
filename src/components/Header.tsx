@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-kreede-black/95 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-center md:justify-between h-20 relative">
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
@@ -94,7 +94,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden absolute right-0"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
