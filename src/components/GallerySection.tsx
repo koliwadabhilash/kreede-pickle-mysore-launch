@@ -6,10 +6,6 @@ const GallerySection = () => {
   
   const galleryImages = [
     {
-      url: "/lovable-uploads/kreede-court-entrance.jpeg",
-      alt: "Kreede Pickleball Club - Grand Entrance"
-    },
-    {
       url: "/lovable-uploads/kreede-court-1.jpeg",
       alt: "Kreede Pickleball Courts - Indoor Facility with Seating"
     },
