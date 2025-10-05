@@ -23,7 +23,7 @@ const AboutSection = () => {
     {
       icon: <MapPin className="h-8 w-8" />,
       title: "Location",
-      description: "Strategically located in Mysuru, Karnataka, bringing premium sporting facilities to the heart of the city."
+      description: "Located in the heart of Mysuru, bringing the joy of sport to the community"
     }
   ];
 

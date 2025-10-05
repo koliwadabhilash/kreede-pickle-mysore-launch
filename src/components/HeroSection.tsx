@@ -47,7 +47,7 @@ const HeroSection = () => {
           
           
           <p className="text-kreede-cream/80 text-sm sm:text-base md:text-lg mb-8 md:mb-12 max-w-3xl mx-auto px-4">
-            Experience premium pickleball courts, connect with fellow players, and enjoy our thoughtfully curated snack bar. Join the fastest-growing sport in the world at Kreede.
+            Experience vibrant pickleball courts, connect with fellow players, and enjoy our thoughtfully curated snack bar. Join the fastest-growing sport in the world at Kreede.
           </p>
 
           {/* Operating Hours Badge */}

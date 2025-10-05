@@ -50,7 +50,7 @@ const GallerySection = () => {
             Our Gallery
           </h2>
           <p className="text-sm md:text-xl text-foreground/70 max-w-2xl mx-auto">
-            Premium facilities and vibrant community
+            Quality facilities and vibrant community
           </p>
         </div>
 

@@ -23,7 +23,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-kreede-cream/80 leading-relaxed mb-6 max-w-md">
-              Mysuru's premier destination for pickleball and active living. Join us in building a community where sports, wellness, and friendships thrive.
+              Mysuru's leading destination for pickleball and active living. Join us in building a community where sports, wellness, and friendships thrive.
             </p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/kreede_official/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-kreede-cream/10 rounded-full flex items-center justify-center hover:bg-kreede-cream/20 transition-colors">
