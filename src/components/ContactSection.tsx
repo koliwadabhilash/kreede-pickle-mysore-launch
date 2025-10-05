@@ -1,18 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Calendar, Clock, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Calendar, Clock, Copy } from "lucide-react";
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleBookCourt = () => {
     window.open("https://booking.example.com", "_blank");
   };
 
   const handleCallToBook = () => {
-    window.open("tel:+919606055181", "_self");
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      window.open("tel:+919606055181", "_self");
+    } else {
+      // Desktop: Copy to clipboard
+      navigator.clipboard.writeText("+919606055181");
+      toast({
+        title: "Phone number copied!",
+        description: "+91 96060 55181",
+      });
+    }
   };
 
   const handleEmailContact = () => {
@@ -79,7 +92,8 @@ const ContactSection = () => {
                 Prefer to speak with us directly? Call us and we'll help you find the perfect time to play.
               </p>
               <div className="bg-kreede-black text-kreede-cream px-6 py-4 rounded-lg flex items-center justify-center gap-2 text-lg font-semibold min-h-[56px] group-hover:bg-kreede-black/90 transition-colors">
-                <Phone className="h-5 w-5" />
+                <Phone className="h-5 w-5 md:hidden" />
+                <Copy className="h-5 w-5 hidden md:block" />
                 +91 96060 55181
               </div>
             </CardContent>
